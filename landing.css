@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* overflow: hidden;*/
+    height: 100vh;
+}
+
+.maincontainer {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+#home {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: #040E37;
+    flex-direction: column;
+    align-items: center;
+    scroll-snap-align: center;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    background-color: #040E37;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    scroll-snap-align: center;
+}
+section h1 {
+    color: #BABABA;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+section p {
+    color: #BABABA;
+    width: 50%;
+    height: 50%;
+}
+
+.navbar {
+    position: fixed;
+    padding: 0 30px;
+    display: flex;
+    height: 10%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul:nth-child(1) {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    list-style-type: none;
+    color: #BABABA;
+}
+
+#home .img {
+    height: 70%;
+    width: 100%;
+    background-image: url("images\\logo-without-tagline.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.navbar a:hover {
+    color: red;
+} 
+
+.video {
+    width: 40%;
+}
+
+#myVideo {
+    width: 100%;
+}
+
+a {
+    color: #BABABA;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 5px;
+}
+a:after {   
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #BABABA;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+a:hover:after { 
+    color: red;
+    width: 100%; 
+    left: 0; 
+}
