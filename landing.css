@@ -37,11 +37,13 @@ section {
     align-items: center;
     scroll-snap-align: center;
 }
+
 section h1 {
     color: #BABABA;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
 }
+
 section p {
     color: #BABABA;
     width: 50%;
@@ -98,6 +100,7 @@ a {
     position: relative;
     padding-bottom: 5px;
 }
+
 a:after {   
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
@@ -110,6 +113,7 @@ a:after {
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
+
 a:hover:after { 
     color: red;
     width: 100%; 
