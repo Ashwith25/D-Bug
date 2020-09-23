@@ -9,68 +9,67 @@
 	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 	<link rel="stylesheet" href="login.css">
-</head>
 <!-- Internal CSS -->
-<style>
-	body {
-		/* background: #f6f5f7; */
-		/* background-image: url("images\\bg-test-1.jpg");
-		background-repeat: repeat;
-		background-size: contain; */
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		font-family: 'Montserrat', sans-serif;
-		height: 100vh;
-		margin: -20px 0 50px;
-	}
+	<style>
+		body {
+			/* background: #f6f5f7; */
+			/* background-image: url("images\\bg-test-1.jpg");
+			background-repeat: repeat;
+			background-size: contain; */
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			font-family: 'Montserrat', sans-serif;
+			height: 100vh;
+			margin: -20px 0 50px;
+		}
 
-	h1 {
-		color: #BABABA;
-		font-weight: bold;
-		margin: 0;
-	}
+		h1 {
+			color: #BABABA;
+			font-weight: bold;
+			margin: 0;
+		}
 
-	h2 {
-		text-align: center;
-	}
+		h2 {
+			text-align: center;
+		}
 
-	p {
-		color: black;
-		font-size: 14px;
-		font-weight: 100;
-		line-height: 20px;
-		letter-spacing: 0.5px;
-		margin: 20px 0 30px;
-	}
+		p {
+			color: black;
+			font-size: 14px;
+			font-weight: 100;
+			line-height: 20px;
+			letter-spacing: 0.5px;
+			margin: 20px 0 30px;
+		}
 
-	span {
-		color: #BABABA;
-		font-size: 12px;
-	}
+		span {
+			color: #BABABA;
+			font-size: 12px;
+		}
 
-	a {
-		color: #333;
-		font-size: 14px;
-		text-decoration: none;
-		margin: 15px 0;
-	}
+		a {
+			color: #333;
+			font-size: 14px;
+			text-decoration: none;
+			margin: 15px 0;
+		}
 
-	button {
-		border-radius: 20px;
-		background-color: #051249;
-		border: 1px solid #040E37;
-		font-family: 'Audiowide', cursive;
-		color: #FFFFFF;
-		font-size: 15px;
-		padding: 8px 30px;
-		letter-spacing: 1px;
-		transition: transform 80ms ease-in;
-		cursor: pointer;
-	}
-</style>
-
+		button {
+			border-radius: 20px;
+			background-color: #051249;
+			border: 1px solid #040E37;
+			font-family: 'Audiowide', cursive;
+			color: #BABABA;
+			font-size: 15px;
+			padding: 8px 30px;
+			letter-spacing: 1px;
+			transition: transform 80ms ease-in;
+			cursor: pointer;
+		}
+	</style>
+</head>
 <body>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
@@ -114,10 +113,9 @@
 				<input type="email" placeholder="Email"/>
 				<i class="fa fa-lock icon"></i>
 				<input type="password" placeholder="Password"/>
-			</div>
-			<button>login</button>
+			</div>  
+			<button onclick="location.href='home.html'" type="button">login</button>
 			<a href="#">Forgot your password?</a>
-			
 		</form>
 	</div>
 	<div class="overlay-container">
