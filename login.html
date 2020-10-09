@@ -12,10 +12,6 @@
 <!-- Internal CSS -->
 	<style>
 		body {
-			/* background: #f6f5f7; */
-			/* background-image: url("images\\bg-test-1.jpg");
-			background-repeat: repeat;
-			background-size: contain; */
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -73,7 +69,7 @@
 <body>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form action="#">
+		<form>
 			<h1>Create Account</h1>
 			
 			<div class="social-container">
@@ -86,20 +82,27 @@
 
 			<div class="input-icons">
 				<i class="fa fa-user icon"></i>
-				<input type="text" placeholder="Name"/>
+				<input type="text" class = "input_name" placeholder="Name" pattern="[(A-Z)* (a-z)*]*" 
+				title="Should only contain letters" required/>
 				<i class="fa fa-envelope icon"></i>
-				<input type="email" placeholder="Email"/>
+				<input type="email" placeholder="Email" required/>
 				<i class="fa fa-lock icon"></i>
-				<input type="password" placeholder="Password"/>
+				<input type="password" class="input_password" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" 
+				title="Password must contain:
+				• At least 1 Uppercase
+				• At least 1 Lowercase
+				• At least 1 Number
+				• At least 1 Symbol, symbol allowed --> !@#$%^&*_=+-
+				• Min 8 chars and Max 12 chars " required/>
 				<i class="fa fa-lock icon"></i>
-				<input type="password" placeholder="Confirm password">
+				<input type="password" placeholder="Confirm password" required>
 			</div>
 
 			<button>sign up</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form action="#">
+		<form>
 			<img src="images\logo2.png" alt="logo" style="height: 150px; width: 200px;">
 			<h1>Sign in</h1>
 			<div class="social-container">

@@ -19,7 +19,7 @@ var marker = L.marker([18.9902, 73.1277]).addTo(mymap);
 // });
 
 function myFunction() {
-    var x = document.getElementById("ham-links");
+    var x = document.querySelector("#ham-links");
     if (x.style.display === "flex") {
       x.style.display = "none";
     } 

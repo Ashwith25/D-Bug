@@ -50,7 +50,6 @@ input {
 	text-align: center;
 	border-radius: 20px;
 	background-color: #BABABA;
-	/* color: #BABABA; */
 	border: none;
 	padding: 12px 15px;
 	margin: 8px 0;
@@ -63,7 +62,6 @@ input:focus {
 }
 
 .container {
-	/* background-color: #040e37; */
 	background: linear-gradient(180.44deg, #040E37 43.61%, rgba(186, 186, 186, 0.91) 107.48%);
 	border-radius: 10px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
