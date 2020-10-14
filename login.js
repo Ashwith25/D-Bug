@@ -27,11 +27,11 @@ function formValidator(){
 	var pass = document.getElementsByName("password");
 	var conf_pass = document.getElementsByName("confirm_password");
 	var email = document.getElementsByName("email");
-	if (username=="" & email=="" & pass[0].value=="" & conf_pass[0].value=="" ){
-		alert("Username field is empty");
+	if (username=="" && email[0].value=="" && pass[0].value=="" && conf_pass[0].value==""){
+		alert("All fields are empty");
 	}
 	else if (username==""){
-		alert("All fields are empty");
+		alert("Username field is empty");
 	}
 	else if(pass[0].value=="" || conf_pass[0].value==""){
 		alert("Password fields are empty");
