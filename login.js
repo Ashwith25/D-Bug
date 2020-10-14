@@ -26,8 +26,6 @@ function formValidator(){
 	var username = document.forms["signup_form"]["name"].value;
 	var pass = document.getElementsByName("password");
 	var conf_pass = document.getElementsByName("confirm_password");
-	console.log(username);
-	console.log(pass);
 	if (username==""){
 		alert("Name is empty");
 	}
