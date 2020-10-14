@@ -16,7 +16,7 @@ function form_submit(){
 	if (formValidator()==true){
 		var forms = document.getElementsByName("signup_form");
 		forms[0].submit();
-		alert("Form submission succesfull!");
+		alert("Form submission successfull!");
 	}
 }
 
@@ -26,8 +26,12 @@ function formValidator(){
 	var username = document.forms["signup_form"]["name"].value;
 	var pass = document.getElementsByName("password");
 	var conf_pass = document.getElementsByName("confirm_password");
-	if (username==""){
-		alert("Name is empty");
+	var email = document.getElementsByName("email");
+	if (username=="" & email=="" & pass[0].value=="" & conf_pass[0].value=="" ){
+		alert("Username field is empty");
+	}
+	else if (username==""){
+		alert("All fields are empty");
 	}
 	else if(pass[0].value=="" || conf_pass[0].value==""){
 		alert("Password fields are empty");
