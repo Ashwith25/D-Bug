@@ -16,7 +16,7 @@ function form_submit(){
 	if (formValidator()==true){
 		var forms = document.getElementsByName("signup_form");
 		forms[0].submit();
-		alert("Form submission successfull!");
+		alert("Signup successful !");
 	}
 }
 
@@ -44,4 +44,31 @@ function formValidator(){
 		flag=true;
 	}
 	return flag;
+}
+
+function formValidator_signin(){
+	flag=false;
+	var signin_email=document.getElementsByName("signin_email");
+	var signin_pass=document.getElementsByName("signin_password");
+	if (signin_email[0].value=="" && signin_pass[0].value==""){
+		alert("All fields are empty");
+	}
+	else if (signin_email[0].value==""){
+		alert("Email field is empty");
+	}
+	else if (signin_pass[0].value==""){
+		alert("Password field is empty");
+	}
+	else {
+		flag=true;
+	}
+	return flag;
+}
+
+function form_submit_signin(){
+	if (formValidator_signin()==true){
+		var forms = document.getElementsByName("signin_form");
+		forms[0].submit();
+		alert("login successful!");
+	}
 }
