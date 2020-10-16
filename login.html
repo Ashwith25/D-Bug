@@ -102,7 +102,7 @@
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form>
+		<form name="signin_form" method="POST" action="home.html">
 			<img src="images\logo2.png" alt="logo" style="height: 150px; width: 200px;">
 			<h1>Sign in</h1>
 			<div class="social-container">
@@ -113,11 +113,11 @@
 			<span>or use your account</span>
 			<div class="input-icons"> 
 				<i class="fa fa-envelope icon"></i>
-				<input type="email" placeholder="Email"/>
+				<input type="email" name="signin_email" placeholder="Email" required/>
 				<i class="fa fa-lock icon"></i>
-				<input type="password" placeholder="Password"/>
+				<input type="password" name="signin_password" placeholder="Password" required/>
 			</div>  
-			<button onclick="location.href='home.html'" type="button">login</button>
+			<button type="submit" onclick="form_submit_signin()">login</button>
 			<a href="#">Forgot your password?</a>
 		</form>
 	</div>
