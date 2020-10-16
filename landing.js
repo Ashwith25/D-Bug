@@ -27,3 +27,19 @@ function myFunction() {
       x.style.display = "flex";
     }
   }
+
+
+// landing video
+var landing_video = document.getElementById("landing-video");
+
+function video_play() {
+    landing_video.play();
+}
+
+function video_pause() {
+    landing_video.pause();
+}
+
+function fullscreen() {
+  landing_video.webkitRequestFullScreen();
+}

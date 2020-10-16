@@ -27,8 +27,8 @@ body {
     scroll-snap-align: center;
 }
 
-
 .navbar {
+    background-color: rgba(4, 14, 55, 0.7);
     flex-direction: row;
     position: fixed;
     padding: 0 30px;
@@ -64,6 +64,7 @@ li {
     color: red;
 } 
 
+
 .video {
     width: 40%;
 }
@@ -87,16 +88,7 @@ li {
 }
 
 
-#contact {
-    height: 100vh;
-    width: 100%;
-    background-color: #040E37;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    scroll-snap-align: center;
-}
+
 
 section h1 {
     color: #BABABA;
@@ -137,9 +129,66 @@ section h1 {
     scroll-snap-align: center;
 }
 
-#map {
-    height: 30%;
-    width: 80%;
+.about-video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    width: 18%;
+}
+
+#landing-video {
+    padding-top: 10px;
+    width: 100%;
+}
+
+.video-buttons {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.fa-expand {
+    fill: #BABABA;
+}
+
+.fa-play {
+    fill: #BABABA;
+}
+
+.fa-pause{
+    fill: #BABABA;
+}
+
+.video-buttons button{
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    border: none;
+    color: #040E37;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    width: 20px;
+}
+
+.play {
+    background-image: url("images\\play-solid.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.pause {
+    background-image: url("images\\pause-solid.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.fullscreen {
+    background-image: url("images\\expand-solid.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 
@@ -166,7 +215,7 @@ a {
     padding-bottom: 5px;
 }
 
-a:after {   
+ .navbar a:after {   
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";
@@ -179,10 +228,138 @@ a:after {
     width: 0;
 }
 
-a:hover:after { 
+.navbar a:hover:after { 
     color: red;
     width: 100%; 
     left: 0; 
+}
+
+#contact {
+    height: 100vh;
+    width: 100%;
+    background-color: #040E37;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    scroll-snap-align: center;
+}
+
+#contact-grid {
+    height: 60%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 30% 30% 40%;
+    grid-template-rows: 35% 35% 30%;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.profiles {
+    border: 1px solid #BABABA;
+    display: grid;
+    grid-template-columns: 35% 64%;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;  
+    padding: 5px;
+}
+
+.profile-photo {
+    border: 1px dotted #BABABA;
+    grid-row: span 2;
+}
+
+.Ashwith {
+    background-image: url("images\\Ashwith.jpeg");
+    background-size: cover;
+}
+
+.Manasi {
+    background-image: url("images\\Manasi.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.profile-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dotted #BABABA;
+}
+
+.profile-name p {
+    text-align: center;
+    color: #BABABA;
+    font-weight: bold;
+    transition: all 0.3s ease-in;
+}
+
+.profile-links {
+    border: 1px dotted #BABABA;
+    background-color: #bababa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-links a {
+    margin: 0 10px;
+}
+
+
+.query-form {
+    grid-row: span 3;
+    border: 1px solid #BABABA;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.query-form input{
+    width: 90%;
+    height: 10%;
+    background-color: #BABABA;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    padding-left: 10px;
+}
+
+.query-form textarea{
+    width: 90%;
+    height: 35%;
+    background-color: #BABABA;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    padding-top: 7px;
+    padding-left: 10px;
+}
+
+.query-form button {
+    width: 15%;
+    height: 7%;
+    border: none;
+    outline: none;
+    background: #BABABA;
+    color: #040E37;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.2s ease-in;
+}
+
+.query-form button:hover {
+    color: #BABABA;
+    border: 1px solid #BABABA;
+    background-color: #040E37;
+}
+
+#map {
+    grid-column: span 2;
 }
 
 @media all and (max-width: 1100px) {
