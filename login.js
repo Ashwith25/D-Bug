@@ -20,7 +20,6 @@ function form_submit(){
 	}
 }
 
-
 function formValidator(){
 	flag=false;
 	var username = document.forms["signup_form"]["name"].value;

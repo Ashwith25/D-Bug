@@ -60,15 +60,76 @@
                 <p>
                     Along the way, people have created forums and helped each other, we have a simple UI which helps people at all levels of programming to understand the content.
                 </p>
+                
             </div>
-            <div id="map">
-            </div>
+            <div class="about-video">
+                <div class="video-buttons">
+                    <button class="video-buttons play" onclick="video_play()">`</button>
+                    <button class="video-buttons pause" onclick="video_pause()"></button>
+                    <button class="video-buttons fullscreen" onclick="fullscreen()">`</button>
+                </div>
+                <video muted id="landing-video">
+                    <source src="video\\landing-video.mp4" type="video/mp4">
+                </video>
+            </div>  
         </section>
 
         <section id="contact">
-            <h1>Contact Us</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio temporibus, blanditiis, aspernatur omnis sint quisquam impedit quis unde eos molestiae saepe magnam veritatis quidem nobis. Impedit, omnis in pariatur magni cumque soluta iste voluptatem nisi eaque consequatur reprehenderit atque, obcaecati modi corrupti at consectetur ducimus accusantium placeat temporibus sequi sint iure deleniti? Consectetur veniam ullam dolorum provident, est harum voluptatum deserunt animi corrupti aut odit repellat, libero explicabo dicta asperiores minima eos rem veritatis! Non velit repellendus perferendis! Culpa officia libero distinctio vitae, nobis qui iusto. Quidem odit, corrupti, assumenda corporis architecto, earum similique rerum omnis neque porro magnam amet provident voluptatem debitis quo minus quos doloremque? Dolore odit aut impedit atque eum pariatur! Tempore aliquid tempora sunt nostrum dicta, repellendus recusandae. Eum dolorem, provident libero unde fugiat quod consequuntur deserunt consequatur tenetur dolore nam magnam repudiandae. Natus error atque, dignissimos tenetur blanditiis rem a nihil dolorum, reprehenderit culpa vero.</p>
-        </section>
+            <h1 style="align-self: center; justify-self: center; padding-top: 10px;">Contact Us</h1>
+            <div id="contact-grid">
+                <div class="profiles">
+                    <div class="profile-photo Ashwith">
+                        <!-- <img src="images\\Ashwith.jpeg" alt=""> -->
+                    </div>
+                    <div class="profile-name">
+                        <p>Ashwith Poojary</p>
+                    </div>
+                    <div class="profile-links">
+                        <a href="https://github.com/Ashwith25" target="_blank"><img src="images\\github.png" alt=""></a>
+                        <a href="https://www.linkedin.com/in/ashwith-poojary-8384471a6" target="_blank"><img src="images\\linkedin.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="profiles">
+                    <div class="profile-photo Ritika"></div>
+                    <div class="profile-name">
+                        <p>Ritika Radhakrishnan</p>
+                    </div>
+                    <div class="profile-links">
+                        <a href="#" target="_blank"><img src="images\\github.png" alt=""></a>
+                        <a href="#" target="_blank"><img src="images\\linkedin.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="query-form">
+                    <h3 style="color: red">Query Form</h3>
+                    <input type="text" placeholder="Name" id="query-name" required>
+                    <input type="email" placeholder="E-mail" id="query-email" required>
+                    <input type="text" placeholder="Phone number (Optional)" id="query-phone">
+                    <textarea placeholder="Enter your query here"></textarea>
+                    <button type="submit">Submit</button>
+                </div>
+                <div class="profiles">
+                    <div class="profile-photo Girish"></div>
+                    <div class="profile-name">
+                        <p>Girish Shetiya</p>
+                    </div>
+                    <div class="profile-links">
+                        <a href="https://github.com/GirishRajendraShetiya" target="_blank"><img src="images\\github.png" alt=""></a>
+                        <a href="https://www.linkedin.com/in/girish-shetiya-2a48b01b1" target="_blank"><img src="images\\linkedin.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="profiles">
+                    <div class="profile-photo Manasi"></div>
+                    <div class="profile-name">
+                        <p>Manasi Variar</p>
+                    </div>
+                    <div class="profile-links">
+                        <a href="https://github.com/manasivariar" target="_blank"><img src="images\\github.png" alt=""></a>
+                        <a href="https://www.linkedin.com/in/manasi-variar-9739691a0" target="_blank"><img src="images\\linkedin.png" alt=""></a>
+                    </div>
+                </div>
+                <div id="map"></div>
+            </div>
+            </section>
     </div>
 <script src = "landing.js"></script>
 </body>
