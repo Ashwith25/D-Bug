@@ -53,13 +53,9 @@
             <div id="para">
                 <p>
                     We started <strong style="color: red;">D-BUG</strong> because of the lack of help for newly starting programmers. 
-                
-                
                     That's why D-BUG has been created as such to help them achieve their beginner goals.
-               
                     Along the way, people have created forums and helped each other, we have a simple UI which helps people at all levels of programming to understand the content.
-                </p>
-                
+                </p>   
             </div>
             <div class="about-video">
                 <div class="video-buttons">
@@ -78,7 +74,6 @@
             <div id="contact-grid">
                 <div class="profiles">
                     <div class="profile-photo Ashwith">
-                        <!-- <img src="images\\Ashwith.jpeg" alt=""> -->
                     </div>
                     <div class="profile-name">
                         <p>Ashwith Poojary</p>
@@ -98,14 +93,14 @@
                         <a href="#" target="_blank"><img src="images\\linkedin.png" alt=""></a>
                     </div>
                 </div>
-                <div class="query-form">
+                <form class="query-form" method="POST" name="query-form">
                     <h3 style="color: red">Query Form</h3>
-                    <input type="text" placeholder="Name" id="query-name" required>
-                    <input type="email" placeholder="E-mail" id="query-email" required>
-                    <input type="text" placeholder="Phone number (Optional)" id="query-phone">
-                    <textarea placeholder="Enter your query here"></textarea>
-                    <button type="submit">Submit</button>
-                </div>
+                        <input type="text" placeholder="Name" pattern="[(A-Z)* (a-z)*]*" title="Should only contain letters" id="query-name" required>
+                        <input type="email" placeholder="E-mail" id="query-email" required>
+                        <input type="text" placeholder="Phone number (Optional)" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[1-9]\d{9}$" title="Should only contain 10 digits" id="query-phone">
+                        <textarea placeholder="Enter your query here" id="query-text" required></textarea>
+                        <button type="submit" onclick="query_submit()">Submit</button>
+                </form>
                 <div class="profiles">
                     <div class="profile-photo Girish"></div>
                     <div class="profile-name">
