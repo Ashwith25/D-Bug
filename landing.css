@@ -436,6 +436,7 @@ a {
 
     #contact {
         height: 100%;
+        position: absolute;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
