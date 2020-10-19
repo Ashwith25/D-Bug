@@ -436,7 +436,6 @@ a {
 
     #contact {
         height: 100%;
-        position: initial;
         display: flex;
         position: unset;
         flex-direction: column;
