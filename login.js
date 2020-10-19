@@ -69,5 +69,6 @@ function form_submit_signin(){
 		var forms = document.getElementsByName("signin_form");
 		forms[0].submit();
 		alert("login successful!");
+		window.location.assign("home.html")
 	}
 }
