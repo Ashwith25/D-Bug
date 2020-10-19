@@ -268,20 +268,18 @@ a {
 
 .profile-photo {
     border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
     border: 1px dotted #BABABA;
     grid-row: span 2;
 }
 
 .Ashwith {
     background-image: url("images\\Ashwith.jpeg");
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 .Manasi {
     background-image: url("images\\Manasi.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 .profile-name {
@@ -293,9 +291,11 @@ a {
 }
 
 .profile-name p {
+    text-transform: uppercase;
     text-align: center;
     color: #BABABA;
     font-weight: bold;
+    /* white-space: pre-line; */
     transition: all 0.3s ease-in;
 }
 
@@ -321,6 +321,10 @@ a {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+}
+
+.query-form h3 {
+    font-size: larger;
 }
 
 .query-form input{
@@ -369,7 +373,7 @@ a {
     grid-column: span 2;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1000px) {
     
     #forham {
         display: none;
@@ -431,6 +435,7 @@ a {
     /* contact */
 
     #contact {
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -473,7 +478,9 @@ a {
     }
 
     .profile-name p{
+        text-transform: uppercase;
         font-size: x-small;
+        white-space: pre-line;
     }
 
     .query-form{
