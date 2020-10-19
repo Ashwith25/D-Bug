@@ -268,20 +268,18 @@ a {
 
 .profile-photo {
     border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
     border: 1px dotted #BABABA;
     grid-row: span 2;
 }
 
 .Ashwith {
     background-image: url("images\\Ashwith.jpeg");
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 .Manasi {
     background-image: url("images\\Manasi.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 .profile-name {
