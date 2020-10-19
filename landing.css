@@ -432,6 +432,7 @@ a {
 
     #contact {
         display: flex;
+        position: unset;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
@@ -445,6 +446,7 @@ a {
     }
     
     #map {
+
         grid-column: span 2;
     }
 
