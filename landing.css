@@ -291,9 +291,11 @@ a {
 }
 
 .profile-name p {
+    text-transform: uppercase;
     text-align: center;
     color: #BABABA;
     font-weight: bold;
+    /* white-space: pre-line; */
     transition: all 0.3s ease-in;
 }
 
@@ -319,6 +321,10 @@ a {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+}
+
+.query-form h3 {
+    font-size: larger;
 }
 
 .query-form input{
@@ -367,7 +373,7 @@ a {
     grid-column: span 2;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1000px) {
     
     #forham {
         display: none;
@@ -429,7 +435,9 @@ a {
     /* contact */
 
     #contact {
+        height: 100%;
         display: flex;
+        position: unset;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
@@ -443,6 +451,7 @@ a {
     }
     
     #map {
+
         grid-column: span 2;
     }
 
@@ -471,11 +480,13 @@ a {
     }
 
     .profile-name p{
+        text-transform: uppercase;
         font-size: x-small;
+        white-space: pre-line;
     }
 
     .query-form{
-        border-radius: 10px;
+         border-radius: 10px;
          grid-row: 3;
          grid-column: span 2;
          display: grid;
@@ -513,5 +524,5 @@ a {
         margin-left: 10px;
         height: 70%;
         width: 90%;
-    }
+    
 }
