@@ -436,7 +436,6 @@ a {
 
     #contact {
         height: 100%;
-        position: absolute;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -486,6 +485,7 @@ a {
 
     .query-form{
         border-radius: 10px;
+        resize: both;
          grid-row: 3;
          grid-column: span 2;
          display: grid;
