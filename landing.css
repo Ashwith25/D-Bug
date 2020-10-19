@@ -456,6 +456,7 @@ a {
     .profile-photo {
         height: 80%;
         border-radius: 10px;
+        background-size: cover;
         grid-row: 1;
         grid-column: 1;
     }
@@ -463,10 +464,12 @@ a {
     .profile-links {
         border-radius: 10px;
         grid-column: span 2;
+        margin-right: 3px;
     }
 
     .profile-name {
         border: none;
+        margin-bottom: 10px;
     }
 
     .profile-name p{
@@ -483,7 +486,7 @@ a {
     }
     
     .query-form h3 {
-        font-size: xx-small;
+        font-size: small;
         text-align: center;
         grid-column: span 2;
     }
@@ -502,7 +505,7 @@ a {
         background-color: #040E37;
         border: 1px solid #BABABA;
         margin: 0 auto;
-        height: 50%;
+        height: 70%;
         width: 20%;
         grid-column: span 2;
     }
@@ -511,6 +514,6 @@ a {
         font-size: x-small;
         margin-left: 10px;
         height: 70%;
-        width: 80%;
+        width: 90%;
     }
 }

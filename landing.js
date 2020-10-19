@@ -56,7 +56,7 @@ function formValidator(){
   else if (email==""){
     alert("Email field is empty");
   }
-  else if (numbers.length!=10) {
+  else if (numbers!="" && numbers.length!=10) {
     alert("Number must be of 10 digits");
   }
 	else{

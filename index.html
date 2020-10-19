@@ -97,7 +97,7 @@
                     <h3 style="color: red">Query Form</h3>
                         <input type="text" placeholder="Name" pattern="[(A-Z)* (a-z)*]*" title="Should only contain letters" id="query-name" required>
                         <input type="email" placeholder="E-mail" id="query-email" required>
-                        <input type="text" placeholder="Phone number (Optional)" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[1-9]\d{9}$" title="Should only contain 10 digits" id="query-phone">
+                        <input type="text" placeholder="Phone number (Optional)" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[1-9]\d{9}$" title="Should only contain 10 digits" id="query-phone" optional>
                         <textarea placeholder="Enter your query here" id="query-text" required></textarea>
                         <button type="submit" onclick="query_submit()">Submit</button>
                 </form>
