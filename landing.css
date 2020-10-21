@@ -379,9 +379,23 @@ a {
         visibility: visible;
     }
 
+    .login-signup a {
+        margin: 0;
+        padding: 0;
+    }
+
     #ham {
+        margin: 0;
+        padding: 0;
         display: block;
 
+    }
+
+    .navbar {
+        display: flex;
+        align-items: flex-end;
+        /* justify-content: center; */
+        height: 5%;
     }
 
     /* home */
