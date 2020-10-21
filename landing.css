@@ -284,6 +284,10 @@ a {
     background-image: url("images\\Girish.jpg");
 }
 
+.Ritika {
+    background-image: url("images\\Ritika.jpg");
+}
+
 .profile-name {
     text-transform: uppercase;
     white-space: pre-line;
