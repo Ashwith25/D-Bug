@@ -267,24 +267,22 @@ a {
 }
 
 .profile-photo {
-    border-radius: 10px;
-    border: 1px dotted #BABABA;
+    background-size: contain;
+    background-repeat: no-repeat;
     grid-row: span 2;
 }
 
 .Ashwith {
     background-image: url("images\\Ashwith.jpeg");
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 .Manasi {
     background-image: url("images\\Manasi.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 .profile-name {
+    text-transform: uppercase;
+    white-space: pre-line;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -369,7 +367,7 @@ a {
     grid-column: span 2;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1024px) {
     
     #forham {
         display: none;
@@ -449,14 +447,14 @@ a {
     }
 
     .profiles {
+        display: grid;
+        grid-template-columns: 33% 67%;
         border-radius: 10px;
         grid-row-gap: 5px;
     }
 
     .profile-photo {
-        height: 80%;
-        border-radius: 10px;
-        background-size: cover;
+        background-size: contain;
         grid-row: 1;
         grid-column: 1;
     }
@@ -468,8 +466,9 @@ a {
     }
 
     .profile-name {
+        text-transform: uppercase;
+        white-space: pre-line;
         border: none;
-        margin-bottom: 10px;
     }
 
     .profile-name p{
