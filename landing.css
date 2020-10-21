@@ -273,11 +273,15 @@ a {
 }
 
 .Ashwith {
-    background-image: url("images\\Ashwith.jpeg");
+    background-image: url("images\\Ashwith.jpg");
 }
 
 .Manasi {
     background-image: url("images\\Manasi.jpg");
+}
+
+.Girish {
+    background-image: url("images\\Girish.jpg");
 }
 
 .profile-name {
