@@ -266,39 +266,3 @@ body {
       background-position: 0% 50%
     }
   }
-
-  @media all and (max-width:600px) {
-	
-	.container {
-		padding: 0;
-		margin: 0;
-		transform: rotate(90deg);
-		height: 100%;
-		width: 100vw;
-	}
-
-
-	.overlay-panel {
-		flex-direction: column;
-		transform: translateY(0);
-	}
-
-	
-.overlay-left {
-	transform: translateY(-20%);
-}
-
-.container.right-panel-active .overlay-left {
-	transform: translateY(0);
-}
-
-.overlay-right {
-	right: 0;
-	transform: translateY(0);
-}
-
-.container.right-panel-active .overlay-right {
-	transform: translateY(20%);
-}
-
-  }
