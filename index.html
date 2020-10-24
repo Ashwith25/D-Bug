@@ -42,8 +42,8 @@
             <div class="img">
             </div>
             <div class="video">
-                <video autoplay muted no-loop id="myVideo">
-                    <source src="video\\ezgif.com-resize.mp4" type="video/mp4">
+                <video autoplay muted no-loop playsinline id="myVideo">
+                    <source src="video\ezgif.com-resize.mp4" type="video/mp4">
                 </video>
             </div>
         </section>
@@ -72,11 +72,11 @@
         <section id="contact">
             <h1 style="align-self: center; justify-self: center; padding-top: 10px;">Contact Us</h1>
             <div id="contact-grid">
-                <div class="profiles">
+                <div class="profiles" onmouseover="hover_change_Ashwith()" onmouseout="hover_back_Ashwith()">
                     <div class="profile-photo Ashwith">
                     </div>
                     <div class="profile-name">
-                        <p>Ashwith 
+                        <p id="Ashwith">Ashwith 
                            Poojary
                     </p>
                     </div>
@@ -85,10 +85,10 @@
                         <a href="https://www.linkedin.com/in/ashwith-poojary-8384471a6" target="_blank"><img src="images\\linkedin.png" alt=""></a>
                     </div>
                 </div>
-                <div class="profiles">
+                <div class="profiles" onmouseover="hover_change_Ritika()" onmouseout="hover_back_Ritika()">
                     <div class="profile-photo Ritika"></div>
                     <div class="profile-name">
-                        <p>Ritika 
+                        <p id="Ritika">Ritika 
                            Radhakrishnan
                         </p>
                     </div>
@@ -105,10 +105,10 @@
                         <textarea placeholder="Enter your query here" id="query-text" required></textarea>
                         <button type="submit" onclick="query_submit()">Submit</button>
                 </form>
-                <div class="profiles">
+                <div class="profiles" onmouseover="hover_change_Girish()" onmouseout="hover_back_Girish()">
                     <div class="profile-photo Girish"></div>
                     <div class="profile-name">
-                        <p>Girish 
+                        <p id="Girish">Girish 
                            Shetiya
                         </p>
                     </div>
@@ -117,10 +117,10 @@
                         <a href="https://www.linkedin.com/in/girish-shetiya-2a48b01b1" target="_blank"><img src="images\\linkedin.png" alt=""></a>
                     </div>
                 </div>
-                <div class="profiles">
+                <div class="profiles" onmouseover="hover_change_Manasi()" onmouseout="hover_back_Manasi()">
                     <div class="profile-photo Manasi"></div>
                     <div class="profile-name">
-                        <p>Manasi 
+                        <p id="Manasi">Manasi 
                            Variar
                         </p>
                     </div>

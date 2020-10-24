@@ -80,3 +80,37 @@ function video_pause() {
 function fullscreen() {
   landing_video.webkitRequestFullScreen();
 }
+
+
+function hover_change_Ashwith() {
+  document.getElementById("Ashwith").style.color = "red";
+}
+
+function hover_back_Ashwith() {
+  document.getElementById("Ashwith").style.color = "#BABABA";
+}
+
+function hover_change_Manasi() {
+  document.getElementById("Manasi").style.color = "red";
+}
+
+function hover_back_Manasi() {
+  document.getElementById("Manasi").style.color = "#BABABA";
+}
+
+function hover_change_Girish() {
+  document.getElementById("Girish").style.color = "red";
+}
+
+function hover_back_Girish() {
+  document.getElementById("Girish").style.color = "#BABABA";
+}
+
+function hover_change_Ritika() {
+  document.getElementById("Ritika").style.color = "red";
+}
+
+function hover_back_Ritika() {
+  document.getElementById("Ritika").style.color = "#BABABA";
+}
+
