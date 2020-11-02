@@ -267,6 +267,7 @@ a {
     grid-column-gap: 5px;
     grid-row-gap: 5px;  
     padding: 5px;
+    transition: all 0.3s ease-in;
 }
 
 .profile-photo {
@@ -299,6 +300,7 @@ a {
     align-items: center;
     justify-content: center;
     border: 1px dotted #BABABA;
+    transition: all 0.3s ease-in;
 }
 
 .profile-name p {
