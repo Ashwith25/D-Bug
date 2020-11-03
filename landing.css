@@ -21,14 +21,17 @@ body {
     display: flex;
     height: 100vh;
     width: 100%;
-    background-color: #040E37;
+    /* background-color: #040E37; */
+    background-image: url('images\\parallax\\home-parallax.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     flex-direction: column;
     align-items: center;
     scroll-snap-align: center;
 }
 
 .navbar {
-    background-color: rgba(4, 14, 55, 0.7);
     flex-direction: row;
     position: fixed;
     padding: 0 30px;
@@ -166,6 +169,8 @@ section h1 {
     fill: #BABABA;
 }
 
+
+
 .video-buttons button{
     background-color: transparent;
     font-family: 'Montserrat', sans-serif;
@@ -241,12 +246,17 @@ a {
 #contact {
     height: 100vh;
     width: 100%;
-    background-color: #040E37;
+    /* background-color: #040E37; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     scroll-snap-align: center;
+    background-image: url("images\\parallax\\contact-parallax.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 #contact-grid {
@@ -260,6 +270,7 @@ a {
 }
 
 .profiles {
+    /* background-color: #040E37; */
     border-radius: 10px;
     border: 1px solid #BABABA;
     display: grid;
@@ -267,29 +278,21 @@ a {
     grid-column-gap: 5px;
     grid-row-gap: 5px;  
     padding: 5px;
-    transition: all 0.3s ease-in;
+    transition: all 0.5s ease-in;
 }
 
 .profile-photo {
     background-size: contain;
     background-repeat: no-repeat;
     grid-row: span 2;
+    overflow: hidden;
+    /* margin: auto 0; */
 }
 
-.Ashwith {
-    background-image: url("images\\Ashwith.jpg");
-}
-
-.Manasi {
-    background-image: url("images\\Manasi.jpg");
-}
-
-.Girish {
-    background-image: url("images\\Girish.jpg");
-}
-
-.Ritika {
-    background-image: url("images\\Ritika.jpg");
+.profile-photo img {
+    height: auto;
+    width: 100%;
+    transition: all 0.5s ease-in;
 }
 
 .profile-name {
@@ -325,6 +328,7 @@ a {
 
 
 .query-form {
+    /* background-color: #040E37; */
     border-radius: 10px;
     grid-row: span 3;
     border: 1px solid #BABABA;
@@ -377,6 +381,9 @@ a {
 }
 
 #map {
+    border-radius: 10px;
+    background-color: #040E37;
+    /* padding: 2px; */
     grid-column: span 2;
 }
 
@@ -476,6 +483,7 @@ a {
     .profiles {
         display: grid;
         grid-template-columns: 33% 67%;
+        grid-template-rows: 52% 48%;
         border-radius: 10px;
         grid-row-gap: 5px;
     }

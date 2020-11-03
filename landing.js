@@ -84,33 +84,58 @@ function fullscreen() {
 
 function hover_change_Ashwith() {
   document.getElementById("Ashwith").style.color = "red";
+  document.getElementsByClassName('profiles')[0].style = "border: 1px solid red";
+  document.getElementsByClassName('profile-name')[0].style = 'border: 1px dotted red';
+  document.getElementsByClassName('Ashwith')[0].style = 'transform: scale(1.1)';
 }
 
 function hover_back_Ashwith() {
   document.getElementById("Ashwith").style.color = "#BABABA";
+  document.getElementsByClassName('profiles')[0].style = "border: 1px solid #BABABA";
+  document.getElementsByClassName('profile-name')[0].style = 'border: 1px dotted #BABABA';
+  document.getElementsByClassName('Ashwith')[0].style = 'transform: scale(1)';
 }
 
 function hover_change_Manasi() {
   document.getElementById("Manasi").style.color = "red";
+  document.getElementsByClassName('profiles')[3].style = "border: 1px solid red";
+  document.getElementsByClassName('profile-name')[3].style = 'border: 1px dotted red';
+  document.getElementsByClassName('Manasi')[0].style = 'transform: scale(1.1)';
 }
 
 function hover_back_Manasi() {
   document.getElementById("Manasi").style.color = "#BABABA";
+  document.getElementsByClassName('profiles')[3].style = "border: 1px solid #BABABA";
+  document.getElementsByClassName('profile-name')[3].style = 'border: 1px dotted #BABABA';
+  document.getElementsByClassName('Manasi')[0].style = 'transform: scale(1)';
 }
 
 function hover_change_Girish() {
   document.getElementById("Girish").style.color = "red";
+  document.getElementsByClassName('profiles')[2].style = "border: 1px solid red";
+  document.getElementsByClassName('profile-name')[2].style = 'border: 1px dotted red';
+  document.getElementsByClassName('Girish')[0].style = 'transform: scale(1.1)';
 }
 
 function hover_back_Girish() {
   document.getElementById("Girish").style.color = "#BABABA";
+  document.getElementsByClassName('profiles')[2].style = "border: 1px solid #BABABA";
+  document.getElementsByClassName('profile-name')[2].style = 'border: 1px dotted #BABABA';
+  document.getElementsByClassName('Girish')[0].style = 'transform: scale(1)';
 }
 
 function hover_change_Ritika() {
   document.getElementById("Ritika").style.color = "red";
+  document.getElementsByClassName('profiles')[1].style = "border: 1px solid red";
+  document.getElementsByClassName('profile-name')[1].style = 'border: 1px dotted red';
+  document.getElementsByClassName('Ritika')[0].style = 'transform: scale(1.1)';
 }
 
 function hover_back_Ritika() {
   document.getElementById("Ritika").style.color = "#BABABA";
+  document.getElementsByClassName('profiles')[1].style = "border: 1px solid #BABABA";
+  document.getElementsByClassName('profile-name')[1].style = 'border: 1px dotted #BABABA';
+  document.getElementsByClassName('Ritika')[0].style = 'transform: scale(1)';
+
 }
 
