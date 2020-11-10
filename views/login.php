@@ -2,8 +2,8 @@
 session_start();
 if (isset($_SESSION["user"]))
 {
-	echo '<br>Session already created';
-	header('refresh:2, url=home.php');
+	echo 'Session already created';
+	header('refresh:2, url=..\views\home.php');
 	exit();
 }
 ?>
@@ -18,7 +18,8 @@ if (isset($_SESSION["user"]))
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
 	<!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-	<link rel="stylesheet" href="login.css">
+	<link rel="shortcut icon" href="..\assets\images\favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="..\assets\login.css">
 <!-- Internal CSS -->
 	<style>
 		body {
@@ -79,7 +80,7 @@ if (isset($_SESSION["user"]))
 <body>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form name="signup_form" method="POST" action="register.php">
+		<form name="signup_form" method="POST" action="..\includes\register.php">
 			<h1>Create Account</h1>
 			<div class="social-container">
 				<a href="#" class="social1"><i class="fab fa-facebook-f"></i></a>
@@ -111,8 +112,8 @@ if (isset($_SESSION["user"]))
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form name="signin_form" method="POST" action="signin.php">
-			<img src="images\logo2.png" alt="logo" style="height: 150px; width: 200px;">
+		<form name="signin_form" method="POST" action="..\includes\signin.php">
+			<img src="..\\assets\\images\logo2.png" alt="logo" style="height: 150px; width: 200px;">
 			<h1>Sign in</h1>
 			<div class="social-container">
 				<a href="#" class="social1"><i class="fab fa-facebook-f"></i></a>
@@ -127,7 +128,7 @@ if (isset($_SESSION["user"]))
 				<input type="password" name="signin_password" placeholder="Password" required/>
 			</div>  
 			<button type="submit" onclick="form_submit_signin()">login</button>
-			<a href="#">Forgot your password?</a>
+			<a id='forgot-pass' href="#">Forgot your password?</a>
 		</form>
 	</div>
 	<div class="overlay-container">
@@ -145,6 +146,6 @@ if (isset($_SESSION["user"]))
 		</div>
 	</div>
 </div>
-<script src="login.js"></script>
+<script src="..\assets\login.js"></script>
 </body>
 </html>

@@ -284,3 +284,11 @@ body {
 	  justify-content: center;
 	  align-items: center;
   }
+
+  #forgot-pass {
+	transition: all 0.3s ease-in;
+}
+
+  #forgot-pass:hover {
+	  color: black;
+  }

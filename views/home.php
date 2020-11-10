@@ -2,7 +2,7 @@
 session_start();
 if(isset($_SESSION['user'])!=1){
     echo"<br>Session not created.<br>Please login to continue";
-    header('refresh:2, url=login.php');
+    header('refresh:2, url=..\index.php');
     exit();
 }
 
@@ -14,21 +14,23 @@ if(isset($_SESSION['user'])!=1){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
+    <link rel="shortcut icon" href="..\assets\images\favicon.ico" type="image/x-icon">
+
     <title>D-Bug</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="..\assets\home.css">
 </head>
 <body>
     <div class="maincontainer">
         <div class="navbar">
             <ul>
-                <li><a href="#"><img src="images\logo2.png" alt=""></a></li>
+                <li><a href="#"><img src="..\\assets\\images\logo-without-tagline.png" alt=""></a></li>
             </ul>
             <ul>
                 <li><a href="#">Practice</a></li>
                 <li><a href="#">Challenges</a></li>
                 <li><a href="#">Certification</a></li>
                 <li><a href="#">Forum</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                <li><a href="..\includes\logout.php">Logout</a></li>
             </ul>
             <div class="user">
                 <p>Welcome,</p>
@@ -39,22 +41,22 @@ if(isset($_SESSION['user'])!=1){
         </div>
         <div class="section1">
             <div class="div-blocks">
-                <button style="background-image: url('images\\python.png'); background-repeat: no-repeat; background-size: contain;"><h2>Python</h2></button>
+                <button style="background-image: url('..\\assets\\images\\python.png'); background-repeat: no-repeat; background-size: contain;"><h2>Python</h2></button>
             </div>
             <div class="div-blocks">
-                <button style="background-image: url('images\\java.png'); background-repeat: no-repeat; background-size: contain;"><h2>Java</h2></button>
+                <button style="background-image: url('..\\assets\\images\\java.png'); background-repeat: no-repeat; background-size: contain;"><h2>Java</h2></button>
             </div>
             <div class="div-blocks">
-                <button style="background-image: url('images\\cpp.png'); background-repeat: no-repeat; background-size: contain;"><h2>C++</h2></button>
+                <button style="background-image: url('..\\assets\\images\\cpp.png'); background-repeat: no-repeat; background-size: contain;"><h2>C++</h2></button>
             </div>
             <div class="div-blocks">
-                <button style="background-image: url('images\\c-sharp.png'); background-repeat: no-repeat; background-size: contain;"><h2>C#</h2></button>
+                <button style="background-image: url('..\\assets\\images\\c-sharp.png'); background-repeat: no-repeat; background-size: contain;"><h2>C#</h2></button>
             </div>
             <div class="div-blocks">
-                <button style="background-image: url('images\\javascript.png'); background-repeat: no-repeat; background-size: contain;"><h2>JavaScript</h2></button>
+                <button style="background-image: url('..\\assets\\images\\javascript.png'); background-repeat: no-repeat; background-size: contain;"><h2>JavaScript</h2></button>
             </div>
             <div class="div-blocks">
-                <button style="background-image: url('images\\php.png'); background-repeat: no-repeat; background-size: contain;"><h2>PHP</h2></button>
+                <button style="background-image: url('..\\assets\\images\\php.png'); background-repeat: no-repeat; background-size: contain;"><h2>PHP</h2></button>
             </div>
         </div>
     </div>
@@ -89,11 +91,11 @@ if(isset($_SESSION['user'])!=1){
                 </form>
             </div>
             <div class="socials">
-                <a href="#"><img src="images\\png\\001-instagram.png" alt=""></a>
-                <a href="#"><img src="images\\png\\002-twitter.png" alt=""></a>
-                <a href="#"><img src="images\\png\\003-facebook.png" alt=""></a>
-                <a href="#"><img src="images\\png\\004-whatsapp.png" alt=""></a>
-                <a href="#"><img src="images\\png\\005-linkedin.png" alt=""></a>
+                <a href="#"><img src="..\\assets\\images\\png\\001-instagram.png" alt=""></a>
+                <a href="#"><img src="..\\assets\\images\\png\\002-twitter.png" alt=""></a>
+                <a href="#"><img src="..\\assets\\images\\png\\003-facebook.png" alt=""></a>
+                <a href="#"><img src="..\\assets\\images\\png\\004-whatsapp.png" alt=""></a>
+                <a href="#"><img src="..\\assets\\images\\png\\005-linkedin.png" alt=""></a>
             </div>
         </div>
         

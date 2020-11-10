@@ -1,5 +1,6 @@
 <?php
 session_start();
+error_reporting(E_ALL ^ E_NOTICE);
 $conn = new mysqli('localhost', 'root', '');
 mysqli_select_db($conn, 'dbug');
 
@@ -23,23 +24,24 @@ $fetch_pass = mysqli_fetch_row($result_pass);
 $fetch_name = mysqli_fetch_row($result_name);
 
 $verify_pass = password_verify($pass, $fetch_pass[0]);
+
 if ($fetch_mail[0]==$email) {
     if ($verify_pass){
         $_SESSION["user"] = $email;
         $_SESSION["name"] = $fetch_name[0];
-        header('location:home.php');
+        header('location:..\views\home.php');
         exit();
     }
     else{
         echo 'Incorrect password'.'<br>';
         echo 'Redirecting you to login page...';
-        header('refresh:2, url=login.php');
+        header('refresh:2, url=..\views\login.php');
         exit();
     }
 }
 else{
     echo 'USER NOT FOUND',"<br>";
     echo 'Redirecting...';
-    header('refresh:2, url=login.php');
+    header('refresh:2, url=..\views\login.php');
     exit();
 }

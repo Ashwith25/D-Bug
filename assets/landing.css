@@ -21,7 +21,7 @@ body {
     display: flex;
     height: 100vh;
     width: 100%;
-    background-image: url('assets\images\parallax\home-parallax.jpg');
+    background-image: url('images\\parallax\\home-parallax.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;

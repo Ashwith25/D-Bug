@@ -11,9 +11,10 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
-
+    <link rel="shortcut icon" href="assets\images\favicon.ico" type="image/x-icon">
     <title>D-Bug</title>
-    <link rel="stylesheet" href="landing.css">
+    
+    <link rel="stylesheet" href="assets\landing.css">
 </head>
 <body style="font-family: 'Montserrat', sans-serif;">
     <div id="maincontainer">
@@ -45,7 +46,7 @@
                     <!-- <video autoplay muted no-loop playsinline id="myVideo">
                         <source src="video\Comp 1.mov" type="video/quicktime">
                     </video> -->
-                    <img id="myVideo" src="assets\video\ezgif.com-crop.gif" alt="">
+                    <img id="myVideo" src="video\ezgif.com-crop.gif" alt="">
                 </div>
         </section>
 
@@ -65,7 +66,7 @@
                     <button class="video-buttons fullscreen" onclick="fullscreen()">`</button>
                 </div>
                 <video muted id="landing-video">
-                    <source src="video\\landing-video.mp4" type="video/mp4">
+                    <source src="assets\\video\landing-video.mp4" type="video/mp4">
                 </video>
             </div>  
         </section>
@@ -141,6 +142,6 @@
             </div>
             </section>
     </div>
-<script src = "landing.js"></script>
+<script src = "assets\landing.js"></script>
 </body>
 </html>
