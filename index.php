@@ -27,7 +27,7 @@
                 <li><a href="#contact" class="middle">Contact Us</a></li>
             </ul>
             <ul class="login-signup">
-                <li><a href="login.php">Login / Sign up</a></li>
+                <li><a href="views\login.php">Login / Sign up</a></li>
             </ul>
         </div>
         <div id="ham-links">
@@ -45,7 +45,7 @@
                     <!-- <video autoplay muted no-loop playsinline id="myVideo">
                         <source src="video\Comp 1.mov" type="video/quicktime">
                     </video> -->
-                    <img id="myVideo" src="video\ezgif.com-crop.gif" alt="">
+                    <img id="myVideo" src="assets\video\ezgif.com-crop.gif" alt="">
                 </div>
         </section>
 
