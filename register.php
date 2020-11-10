@@ -16,12 +16,11 @@ $email = $_POST['email'];
 $name_pattern = '/^[a-zA-Z ]*$/'; 
 $email_pattern = '/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/';
 
-if(preg_match($name_pattern, $name)) { 
-    echo("Name string matching with"
-        . " regular expression"); 
+if(!preg_match($name_pattern, $name)) { 
+    echo("Name format mismatch"); 
 } 
-if(preg_match($email_pattern, $email)) {
-	echo("<br>Email valid");
+if(!preg_match($email_pattern, $email)) {
+	echo("<br>Email invalid");
 } 
 
 $query_check = "select * from register where email='$email'";
@@ -31,14 +30,13 @@ if($num==1){
     echo 'USER ALREADY EXISTS',"<br>";
     echo 'Redirecting...';
     header('refresh:2, url=login.php');
+    exit();
 }
 else {
     $pass_hash = password_hash($pass, PASSWORD_DEFAULT);
     $query = "insert into register (name, password, email) values ('$name', '$pass_hash', '$email')";
     mysqli_query($conn, $query);
-    echo 'ACCOUNT CREATED';
-    header('location: home.html');
+    echo 'ACCOUNT CREATED';      
+    header('refresh:2, url=login.php');
+    exit();
 }
-
-$_SESSION["username"] = $email;
-?>

@@ -1,3 +1,13 @@
+<?php
+session_start();
+if (isset($_SESSION["user"]))
+{
+	echo '<br>Session already created';
+	header('refresh:2, url=home.php');
+	exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
