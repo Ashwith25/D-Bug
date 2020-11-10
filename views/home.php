@@ -31,9 +31,10 @@ if(isset($_SESSION['user'])!=1){
                 <li><a href="logout.php">Logout</a></li>
             </ul>
             <div class="user">
-                <p>Welcome,
-                <?php echo $_SESSION["name"] ?>    
-            </p>
+                <p>Welcome,</p>
+                <div style="display:inline-block ;font-weight:bold; color:red;">
+                    <?php echo $_SESSION["name"] ?>
+                </div>
             </div>
         </div>
         <div class="section1">

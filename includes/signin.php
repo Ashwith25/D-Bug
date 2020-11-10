@@ -26,7 +26,7 @@ $verify_pass = password_verify($pass, $fetch_pass[0]);
 if ($fetch_mail[0]==$email) {
     if ($verify_pass){
         $_SESSION["user"] = $email;
-        $_SESSION["name"] = $fetch_name;
+        $_SESSION["name"] = $fetch_name[0];
         header('location:home.php');
         exit();
     }

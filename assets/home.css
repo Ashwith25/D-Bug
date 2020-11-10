@@ -1,0 +1,257 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: #BABABA;
+    justify-content: space-between;
+}
+
+.navbar{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar a img{
+    padding-top: 20px;
+    height: 100px;
+    width: 100px;
+}
+
+.navbar a{
+    /* color: #BABABA; */
+    color: black;
+    text-decoration: none;
+    transition: all 0.15s ease-in;
+}
+
+.navbar a:hover {
+    color:  red;
+}
+
+.navbar ul:nth-child(1) {
+    width: 50%;
+}
+
+.navbar ul:nth-child(2) {
+    margin-top: 50px;
+    padding: 30px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+ul li {
+    color: #BABABA;
+    list-style-type: none;
+}
+
+.navbar .user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.navbar .user p{
+    margin-top: 50px;
+    padding-top: 15px;
+}
+
+/* div blocks */
+
+.section1 {
+    display: grid;
+    height: 80vh;
+    width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    align-self: center;
+    padding-bottom: 10px;
+}
+
+.section1 .div-blocks {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+            0 10px 10px rgba(0,0,0,0.22);
+    border-radius: 15px;
+}
+
+.div-blocks button {
+    color: #BABABA;
+    padding-right: 15px;
+    background-color: #040E37;
+    text-align: right;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    transition: all 0.2s ease-in;
+}
+
+.div-blocks button:hover {
+    color: orangered;
+}
+
+
+/* footer */
+
+.footer {
+    height: 35vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background-color: #040E37;
+}
+
+.footer .map {
+    justify-self: center;
+    align-self: center;
+}
+
+.footer .links{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 80% 20%;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* link1 */
+
+.link li {
+    padding: 5px;
+}
+
+.link a {
+    color: #BABABA;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.link a:hover {
+    color: orangered;
+}
+
+/* link2 */
+
+.link2 form {
+    padding: 10px;
+}
+.link2 {
+    display: flex;
+    flex-direction: column;
+    color: #BABABA;
+}
+
+#email {
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: fit-content;
+    height: 20px;
+}
+
+#email-btn {
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url('images\\send-mail.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* link3 */
+.link3 {
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3px 0;
+}
+
+.link3 form {
+    border-radius: 10px;
+    background-color: #BABABA;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.link3 form input {
+    border-radius: 5px;
+    width: 90%;
+    height: 25px;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+#query-btn {
+    width: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+#query-btn:hover {
+    background-color: #040E37;
+    color: #BABABA;
+}
+
+/* socials */
+
+.socials{
+    height: 50px;
+    grid-column: span 2;
+    justify-self: center;
+    align-self: center;
+    padding-right: 75px;
+}
+
+.socials img {
+    padding: 0 5px;
+}
+
+/* copyright */
+
+.copyright {
+    display: flex;
+    border-top: 2px solid #BABABA;
+    color: #BABABA;
+    grid-column: span 2;
+    align-items: center;
+    justify-content: center;
+}
