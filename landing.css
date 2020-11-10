@@ -21,7 +21,6 @@ body {
     display: flex;
     height: 100vh;
     width: 100%;
-    /* background-color: #040E37; */
     background-image: url('images\\parallax\\home-parallax.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -94,9 +93,6 @@ li {
     outline: none;
 }
 
-
-
-
 section h1 {
     color: #BABABA;
     font-weight: bold;
@@ -117,12 +113,6 @@ section h1 {
     justify-content: center;
     align-items: center;
 }
-
-/* section p {
-    color: #BABABA;
-    width: 80%;
-    height: 50%;
-} */
 
 #about {
     padding: 30px 0;

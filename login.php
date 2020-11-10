@@ -69,7 +69,7 @@
 <body>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form name="signup_form" method="POST">
+		<form name="signup_form" method="POST" action="register.php">
 			<h1>Create Account</h1>
 			<div class="social-container">
 				<a href="#" class="social1"><i class="fab fa-facebook-f"></i></a>
@@ -86,22 +86,22 @@
 				<i class="fa fa-envelope icon"></i>
 				<input type="email" name="email" placeholder="Email" required/>
 				<i class="fa fa-lock icon"></i>
-				<input type="password" name="password" class="input_password" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" 
+				<input type="password" name="password" class="input_password" placeholder="Password" pattern="^(?=.*[a-z])(?=.+[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" 
 				title="Password must contain:
 				• At least 1 Uppercase
 				• At least 1 Lowercase
 				• At least 1 Number
 				• At least 1 Symbol, symbol allowed --> !@#$%^&*_=+-
-				• Min 8 chars and Max 12 chars" required/>
+				• Minimum 5 charachters" required/>
 				<i class="fa fa-lock icon"></i>
 				<input type="password" name="confirm_password" placeholder="Confirm password" required>
 			</div>
-
+			<div class="error"></div>
 			<button type="submit" onclick="form_submit()">sign up</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form name="signin_form" method="POST" action="home.html">
+		<form name="signin_form" method="POST" action="signin.php">
 			<img src="images\logo2.png" alt="logo" style="height: 150px; width: 200px;">
 			<h1>Sign in</h1>
 			<div class="social-container">

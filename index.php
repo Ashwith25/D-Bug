@@ -27,7 +27,7 @@
                 <li><a href="#contact" class="middle">Contact Us</a></li>
             </ul>
             <ul class="login-signup">
-                <li><a href="login.html">Login / Sign up</a></li>
+                <li><a href="login.php">Login / Sign up</a></li>
             </ul>
         </div>
         <div id="ham-links">

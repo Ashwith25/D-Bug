@@ -16,7 +16,6 @@ function form_submit(){
 	if (formValidator()==true){
 		var forms = document.getElementsByName("signup_form");
 		forms[0].submit();
-		alert("Signup successful !");
 	}
 }
 
@@ -27,17 +26,25 @@ function formValidator(){
 	var conf_pass = document.getElementsByName("confirm_password");
 	var email = document.getElementsByName("email");
 	if (username=="" && email[0].value=="" && pass[0].value=="" && conf_pass[0].value==""){
-		alert("All fields are empty");
+		document.querySelector('.error').innerHTML = 'All fields are empty';
 	}
 	else if (username==""){
-		alert("Username field is empty");
+		document.querySelector('.error').innerHTML = 'Username field is empty';
+	}
+	else if(email[0].value==""){
+		document.querySelector('.error').innerHTML = 'Email field is empty';
+	}
+	else if(!email[0].value.match('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z].{2,3}$')){
+		document.querySelector('.error').innerHTML = 'Invalid Email';
 	}
 	else if(pass[0].value=="" || conf_pass[0].value==""){
-		alert("Password fields are empty");
+		document.querySelector('.error').innerHTML = 'Password fields are empty';
+	}
+	else if (!pass[0].value.match("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{5,}$")){
+		document.querySelector('.error').innerHTML = 'Password format mismatch';
 	}
 	else if(pass[0].value != conf_pass[0].value){
-		alert("Passwords did not match! Please try again");
-		return false;
+		document.querySelector('.error').innerHTML = 'Passwords did not match';
 	}
 	else{
 		flag=true;
@@ -68,8 +75,6 @@ function form_submit_signin(){
 	if (formValidator_signin()==true){
 		var forms = document.getElementsByName("signin_form");
 		forms[0].submit();
-		alert("login successful!");
-		window.location.assign("home.html")
 	}
 }
 
