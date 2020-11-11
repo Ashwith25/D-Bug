@@ -41,22 +41,22 @@ if(isset($_SESSION['user'])!=1){
         </div>
         <div class="section1">
             <div class="div-blocks">
-                <button style="background-image: url('..\\assets\\images\\python.png'); background-repeat: no-repeat; background-size: contain;"><h2>Python</h2></button>
+                <input type='button' value="python" onclick='python_f()' id='python' style="height:100%; width:100%; background-image: url('..\\assets\\images\\python.png'); background-repeat: no-repeat; background-size: contain;"><h2>Python</h2>
             </div>
             <div class="div-blocks">
-                <button style="background-image: url('..\\assets\\images\\java.png'); background-repeat: no-repeat; background-size: contain;"><h2>Java</h2></button>
+                <button id='java' style="background-image: url('..\\assets\\images\\java.png'); background-repeat: no-repeat; background-size: contain;"><h2>Java</h2></button>
             </div>
             <div class="div-blocks">
-                <button style="background-image: url('..\\assets\\images\\cpp.png'); background-repeat: no-repeat; background-size: contain;"><h2>C++</h2></button>
+                <button id='cpp' style="background-image: url('..\\assets\\images\\cpp.png'); background-repeat: no-repeat; background-size: contain;"><h2>C++</h2></button>
             </div>
             <div class="div-blocks">
-                <button style="background-image: url('..\\assets\\images\\c-sharp.png'); background-repeat: no-repeat; background-size: contain;"><h2>C#</h2></button>
+                <button id='csharp' style="background-image: url('..\\assets\\images\\c-sharp.png'); background-repeat: no-repeat; background-size: contain;"><h2>C#</h2></button>
             </div>
             <div class="div-blocks">
-                <button style="background-image: url('..\\assets\\images\\javascript.png'); background-repeat: no-repeat; background-size: contain;"><h2>JavaScript</h2></button>
+                <button id='javascript' style="background-image: url('..\\assets\\images\\javascript.png'); background-repeat: no-repeat; background-size: contain;"><h2>JavaScript</h2></button>
             </div>
             <div class="div-blocks">
-                <button style="background-image: url('..\\assets\\images\\php.png'); background-repeat: no-repeat; background-size: contain;"><h2>PHP</h2></button>
+                <button id='php' style="background-image: url('..\\assets\\images\\php.png'); background-repeat: no-repeat; background-size: contain;"><h2>PHP</h2></button>
             </div>
         </div>
     </div>
@@ -103,5 +103,6 @@ if(isset($_SESSION['user'])!=1){
             <p>©2020 D-Bug, All rights reserved</p>
         </div>
     </div>
+<script src = "..\assets\home.js"></script>
 </body>
 </html>
