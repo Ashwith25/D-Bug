@@ -28,7 +28,7 @@ if(isset($_SESSION['user'])!=1){
             <ul>
                 <li><a href="#">Practice</a></li>
                 <li><a href="#">Challenges</a></li>
-                <li><a href="#">Certification</a></li>
+                <li><a href="..\views\certification.php">Certification</a></li>
                 <li><a href="#">Forum</a></li>
                 <li><a href="..\includes\logout.php">Logout</a></li>
             </ul>
@@ -41,10 +41,10 @@ if(isset($_SESSION['user'])!=1){
         </div>
         <div class="section1">
             <div class="div-blocks">
-                <input type='button' value="python" onclick='python_f()' id='python' style="height:100%; width:100%; background-image: url('..\\assets\\images\\python.png'); background-repeat: no-repeat; background-size: contain;"><h2>Python</h2>
+                <button id='python' onclick='python_f()' style="background-image: url('..\\assets\\images\\python.png'); background-repeat: no-repeat; background-size: contain;"><h2>Python</h2></button>
             </div>
             <div class="div-blocks">
-                <button id='java' style="background-image: url('..\\assets\\images\\java.png'); background-repeat: no-repeat; background-size: contain;"><h2>Java</h2></button>
+                <button id='java' onclick='python_f()' style="background-image: url('..\\assets\\images\\java.png'); background-repeat: no-repeat; background-size: contain;"><h2>Java</h2></button>
             </div>
             <div class="div-blocks">
                 <button id='cpp' style="background-image: url('..\\assets\\images\\cpp.png'); background-repeat: no-repeat; background-size: contain;"><h2>C++</h2></button>

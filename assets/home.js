@@ -1,3 +1,3 @@
 function python_f(){
-    window.open("..\\views\\practice.html");
+    window.open("..\\views\\practice.php");
 }

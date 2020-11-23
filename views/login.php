@@ -92,7 +92,7 @@ if (isset($_SESSION["user"]))
 
 			<div class="input-icons">
 				<i class="fa fa-user icon"></i>
-				<input type="text" class = "input_name" name="name" placeholder="Name" pattern="[(A-Z)* (a-z)*]*" 
+				<input type="text" class = "input_name" name="name" placeholder="Name" pattern="[(A-Z)* (a-z)*]+" 
 				title="Should only contain letters" required/>
 				<i class="fa fa-envelope icon"></i>
 				<input type="email" name="email" placeholder="Email" required/>

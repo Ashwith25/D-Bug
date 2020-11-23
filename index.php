@@ -46,7 +46,7 @@
                     <!-- <video autoplay muted no-loop playsinline id="myVideo">
                         <source src="video\Comp 1.mov" type="video/quicktime">
                     </video> -->
-                    <img id="myVideo" src="video\ezgif.com-crop.gif" alt="">
+                    <img id="myVideo" src="assets\video\ezgif.com-crop.gif" alt="">
                 </div>
         </section>
 
@@ -76,7 +76,7 @@
             <div id="contact-grid">
                 <div class="profiles" onmouseover="hover_change_Ashwith()" onmouseout="hover_back_Ashwith()">
                     <div class="profile-photo">
-                        <img class="Ashwith" src="images\\Ashwith.jpg" alt="">
+                        <img class="Ashwith" src="assets\images\\Ashwith.jpg" alt="">
                     </div>
                     <div class="profile-name">
                         <p id="Ashwith">Ashwith
@@ -84,13 +84,13 @@
                         </p>
                     </div>
                     <div class="profile-links">
-                        <a href="https://github.com/Ashwith25" target="_blank"><img src="images\\github.png" alt=""></a>
-                        <a href="https://www.linkedin.com/in/ashwith-poojary-8384471a6" target="_blank"><img src="images\\linkedin.png" alt=""></a>
+                        <a href="https://github.com/Ashwith25" target="_blank"><img src="assets\images\\github.png" alt=""></a>
+                        <a href="https://www.linkedin.com/in/ashwith-poojary-8384471a6" target="_blank"><img src="assets\images\\linkedin.png" alt=""></a>
                     </div>
                 </div>
                 <div class="profiles" onmouseover="hover_change_Ritika()" onmouseout="hover_back_Ritika()">
                     <div class="profile-photo">
-                        <img class="Ritika" src="images\\Ritika.jpg" alt="">
+                        <img class="Ritika" src="assets\images\\Ritika.jpg" alt="">
                     </div>
                     <div class="profile-name">
                         <p id="Ritika">Ritika 
@@ -98,8 +98,8 @@
                         </p>
                     </div>
                     <div class="profile-links">
-                        <a href="https://github.com/ritikaradhakrishnan" target="_blank"><img src="images\\github.png" alt=""></a>
-                        <a href="https://www.linkedin.com/in/ritika-radhakrishnan-a089091a9" target="_blank"><img src="images\\linkedin.png" alt=""></a>
+                        <a href="https://github.com/ritikaradhakrishnan" target="_blank"><img src="assets\images\\github.png" alt=""></a>
+                        <a href="https://www.linkedin.com/in/ritika-radhakrishnan-a089091a9" target="_blank"><img src="assets\images\\linkedin.png" alt=""></a>
                     </div>
                 </div>
                 <form class="query-form" method="POST" name="query-form">
@@ -112,7 +112,7 @@
                 </form>
                 <div class="profiles" onmouseover="hover_change_Girish()" onmouseout="hover_back_Girish()">
                     <div class="profile-photo">
-                        <img class="Girish" src="images\\Girish.jpg" alt="">
+                        <img class="Girish" src="assets\images\\Girish.jpg" alt="">
                     </div>
                     <div class="profile-name">
                         <p id="Girish">Girish 
@@ -120,13 +120,13 @@
                         </p>
                     </div>
                     <div class="profile-links">
-                        <a href="https://github.com/GirishRajendraShetiya" target="_blank"><img src="images\\github.png" alt=""></a>
-                        <a href="https://www.linkedin.com/in/girish-shetiya-2a48b01b1" target="_blank"><img src="images\\linkedin.png" alt=""></a>
+                        <a href="https://github.com/GirishRajendraShetiya" target="_blank"><img src="assets\images\\github.png" alt=""></a>
+                        <a href="https://www.linkedin.com/in/girish-shetiya-2a48b01b1" target="_blank"><img src="assets\images\\linkedin.png" alt=""></a>
                     </div>
                 </div>
                 <div class="profiles" onmouseover="hover_change_Manasi()" onmouseout="hover_back_Manasi()">
                     <div class="profile-photo">
-                        <img class="Manasi" src="images\\Manasi.jpg" alt="">
+                        <img class="Manasi" src="assets\images\\Manasi.jpg" alt="">
                     </div>
                     <div class="profile-name">
                         <p id="Manasi">Manasi
@@ -134,8 +134,8 @@
                         </p>
                     </div>
                     <div class="profile-links">
-                        <a href="https://github.com/manasivariar" target="_blank"><img src="images\\github.png" alt=""></a>
-                        <a href="https://www.linkedin.com/in/manasi-variar-9739691a0" target="_blank"><img src="images\\linkedin.png" alt=""></a>
+                        <a href="https://github.com/manasivariar" target="_blank"><img src="assets\images\\github.png" alt=""></a>
+                        <a href="https://www.linkedin.com/in/manasi-variar-9739691a0" target="_blank"><img src="assets\images\\linkedin.png" alt=""></a>
                     </div>
                 </div>
                 <div id="map"></div>

@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(isset($_SESSION['user'])!=1){
+    echo"<br>Session not created.<br>Please login to continue";
+    header('refresh:2, url=..\index.php');
+    exit();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +16,12 @@
     <title>D-Bug</title>
     <link rel="shortcut icon" href="..\assets\images\favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="..\assets\practice.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
 </head>
-<body>
+<body style="background-color: #BABABA; font-family: 'Montserrat', sans-serif;">
     <div class="main">
         <div class="maincontainer">
-            <div class='question-block'>
+            <div class='question-block' style="background-color: white;">
                 <div class="text"><p>Questions</p></div>
                 <div class="text"><p>Answer</p></div>
                 <div class="text"><p>Submit</p></div>
