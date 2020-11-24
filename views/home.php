@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL ^ E_NOTICE);
+$conn = new mysqli('localhost', 'root', '');
+mysqli_select_db($conn, 'dbug');
 session_start();
 if(isset($_SESSION['user'])!=1){
     echo"<br>Session not created.<br>Please login to continue";
@@ -34,29 +37,65 @@ if(isset($_SESSION['user'])!=1){
             </ul>
             <div class="user">
                 <p>Welcome,</p>
-                <div style="display:inline-block ;font-weight:bold; color:red;">
-                    <?php echo $_SESSION["name"] ?>
+                <div id="user-profile" style="display:inline-block ;font-weight:bold; color:red; cursor: pointer;">
+                    <?php echo $_SESSION["name"]; ?>
                 </div>
             </div>
         </div>
+
+        <div class="bg-modal">
+	        <div class="modal-contents">
+		        <div class="close">+</div>
+                <?php
+                    $emails = $_SESSION["user"];
+                    $query1 = "select name from register where email = '$emails' ";
+                    $result_name = mysqli_query($conn, $query1);
+                    $fetch_name = mysqli_fetch_row($result_name);
+                    echo '<div id="user-details">';
+                    echo '<p>Username: </p>';
+                    echo '<p>'.$fetch_name[0].'</p>';
+                    echo '<p>Registerd E-mail: </p>';
+                    echo '<p>'.$emails.'</p>';
+                    echo '</div>';
+                ?>
+                <button id="update-username">Update Username</button>
+	        </div>
+        </div>
+        <div class="bg-modal-form">
+	        <div class="modal-contents-form">
+		        <div class="close-form">+</div>
+                <form id="update-name-form" action="..\includes\update.php" method='POST'>
+                    <input type="text" name="username" placeholder="Enter New username" pattern="[(A-Z)* (a-z)*]+" title="Should only contain letters" required>
+                    <input type="password" name="password" placeholder="Enter password" required>
+                    <input id="submit-form" type="submit" value="Submit">
+                    <p style="color: red">login again to see the necessary changes</p>
+                </form>
+	        </div>
+        </div>
         <div class="section1">
-            <div class="div-blocks">
-                <button id='python' onclick='python_f()' style="background-image: url('..\\assets\\images\\python.png'); background-repeat: no-repeat; background-size: contain;"><h2>Python</h2></button>
+            <div class="div-blocks" onclick="window.open('..\\views\\practice.php')" onmouseover="python_hover_in()" onmouseout="python_hover_out()">
+                <img class="python" src="..\\assets\\images\\python.png" alt="">
+                <h2 class="python">Python</h2>
             </div>
-            <div class="div-blocks">
-                <button id='java' onclick='python_f()' style="background-image: url('..\\assets\\images\\java.png'); background-repeat: no-repeat; background-size: contain;"><h2>Java</h2></button>
+            <div class="div-blocks" onclick="window.open('https://quilgo.com/form/vMgxOpGeqIXPjEic')" onmouseover="java_hover_in()" onmouseout="java_hover_out()">
+                <img class="java" src="..\\assets\\images\\java.png" alt="">
+                <h2 class="java">Java</h2>
             </div>
-            <div class="div-blocks">
-                <button id='cpp' style="background-image: url('..\\assets\\images\\cpp.png'); background-repeat: no-repeat; background-size: contain;"><h2>C++</h2></button>
+            <div class="div-blocks" onclick="window.open('https://quilgo.com/form/ns4sgVs0WlKKlvNm')" onmouseover="cpp_hover_in()" onmouseout="cpp_hover_out()">
+                <img class="cpp" src="..\\assets\\images\\cpp.png" alt="">
+                <h2 class="cpp">C++</h2>
             </div>
-            <div class="div-blocks">
-                <button id='csharp' style="background-image: url('..\\assets\\images\\c-sharp.png'); background-repeat: no-repeat; background-size: contain;"><h2>C#</h2></button>
+            <div class="div-blocks" onclick="window.open('https://quilgo.com/form/uNBNpqJX3QeBHoyx')" onmouseover="csharp_hover_in()" onmouseout="csharp_hover_out()">
+                <img class="csharp" src="..\\assets\\images\\c-sharp.png" alt="">
+                <h2 class="csharp">C#</h2>
             </div>
-            <div class="div-blocks">
-                <button id='javascript' style="background-image: url('..\\assets\\images\\javascript.png'); background-repeat: no-repeat; background-size: contain;"><h2>JavaScript</h2></button>
+            <div class="div-blocks" onclick="window.open('https://quilgo.com/form/4h2Cn04c3Hg2jYKi')" onmouseover="js_hover_in()" onmouseout="js_hover_out()">
+                <img class="js" src="..\\assets\\images\\javascript.png" alt="">
+                <h2 class="js">JavaScript</h2>
             </div>
-            <div class="div-blocks">
-                <button id='php' style="background-image: url('..\\assets\\images\\php.png'); background-repeat: no-repeat; background-size: contain;"><h2>PHP</h2></button>
+            <div class="div-blocks" onclick="window.open('https://quilgo.com/form/M7MjtCapfDM26bCy')" onmouseover="php_hover_in()" onmouseout="php_hover_out()">
+                <img class="php" src="..\\assets\\images\\php.png" alt="">
+                <h2 class="php">PHP</h2>
             </div>
         </div>
     </div>
@@ -103,6 +142,6 @@ if(isset($_SESSION['user'])!=1){
             <p>©2020 D-Bug, All rights reserved</p>
         </div>
     </div>
-<script src = "..\assets\home.js"></script>
+<script src = "..\assets\\home.js"></script>
 </body>
 </html>

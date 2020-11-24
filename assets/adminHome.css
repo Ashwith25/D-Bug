@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #BABABA;
+    color: #BABABA;
+}
+
+.logout {
+    position: fixed;
+    right: 50px;
+    padding: 5px;
+    height: 30px;
+    width: 50px;
+    cursor: pointer;
+    color: #040E37;
+    width: 10%;
+    border: 2px solid #040E37;
+    outline: none;
+    border-radius: 5px;
+    background-color: #BABABA;
+    transition: all 0.3s ease-in;
+    font-family: 'Audiowide', cursive;
+    letter-spacing: 0.5px;
+}
+
+.logout:hover {
+    background-color: #040E37;
+    color: #BABABA;
+}
+
+.table-headers {
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
+    font-family: 'Audiowide', cursive;
+    letter-spacing: 0.5px;
+}
+
+.maincontainer {
+    margin-top: 30px;
+    height: 90vh;
+    width: 100%;
+    background-color: #BABABA;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1{
+    font-size: xx-large;
+}
+
+.functionalities {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 10% 90%;
+    grid-column-gap: 10px;
+    height: 70%;
+    width: 90%;
+    text-align: center;
+}
+
+.functionalities div {
+    border: 1px solid #BABABA;
+    border-radius: 8px;
+    background-color: #040E37;
+}
+
+.search-users {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#table-result {
+    display: grid;
+    height: 50%;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    padding: 0 10px;
+    border: none;
+}
+
+#table-result div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+}
+
+.header {
+    font-size: x-large;
+    font-weight: 45;
+}
+
+/* Deleting card */
+#delete-users {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#delete-user table {
+    padding-top: 75px;
+    width: 100%;
+    height: 70%;
+    text-align: left;
+}
+
+#delete-user table td {
+    padding: 10px 5px;
+}
+
+.submit-delete {
+    text-align: center;
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: #040E37;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    background-color: #BABABA;
+    font-family: 'Audiowide', cursive;
+    letter-spacing: 0.5px;
+}
+
+.submit-delete:hover {
+    color: #BABABA;
+    background-color: #040E37;
+    border: 1px solid #BABABA;
+}
+
+.form-inputs{
+    height: 30px;
+    border-radius: 5px;
+    background-color: #BABABA;
+    outline: none;
+    border: none;
+    text-align: center;
+}
+
+/* Questions Card */
+#question-set {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 10px;
+}
+.questions{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    padding-left: 5px;
+    outline: none;
+    border-radius: 5px;
+    background-color: #BABABA;
+}
+
+#answer {
+    outline: none;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+}
+
+

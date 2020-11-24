@@ -15,7 +15,7 @@ body{
     height: 100vh;
     width: 100%;
     background-color: #BABABA;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .navbar{
@@ -77,41 +77,43 @@ ul li {
 /* div blocks */
 
 .section1 {
+    height: 90%;
+    width: 100%;
+    padding: 30px 10px;
     display: grid;
-    height: 80vh;
-    width: 90%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-row-gap: 20px;
-    grid-column-gap: 20px;
-    align-self: center;
-    padding-bottom: 10px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
 }
 
-.section1 .div-blocks {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-            0 10px 10px rgba(0,0,0,0.22);
+.div-blocks{
+    justify-items: center;
+    background-color: #040E37;
+    align-items: center;
+    justify-content: center;
+    color: #BABABA;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     border-radius: 15px;
 }
 
-.div-blocks button {
-    color: #BABABA;
-    padding-right: 15px;
-    background-color: #040E37;
-    text-align: right;
+.div-blocks h2 {
+    font-size: xx-large;
+    transition: all 0.3s ease-in;
+}
+
+.div-blocks img {
+    padding: 55px 40px;
+    /* overflow: hidden; */
     width: 100%;
     height: 100%;
+    transition: all 0.3s ease-in;
+}
+
+.div-blocks:hover {
     cursor: pointer;
-    outline: none;
-    border: none;
-    border-radius: 15px;
-    transition: all 0.2s ease-in;
 }
-
-.div-blocks button:hover {
-    color: orangered;
-}
-
 
 /* footer */
 
@@ -254,4 +256,146 @@ ul li {
     grid-column: span 2;
     align-items: center;
     justify-content: center;
+}
+
+/* user contents */
+
+.bg-modal {
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-contents {
+	height: 300px;
+	width: 500px;
+	background-color: #BABABA;
+	padding: 20px;
+	position: relative;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+}
+
+.close {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	font-size: 42px;
+	color: #333;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+
+.close:hover {
+    color: #666;
+}
+
+.modal-contents button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#user-details {
+    width: 100%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+#user-details p {
+    font-weight: bold;
+    font-size: medium;
+}
+
+/* update user details  */
+.bg-modal-form {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	display: none;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal-contents-form {
+	height: 300px;
+	width: 500px;
+	background-color: #BABABA;
+	padding: 20px;
+	position: relative;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+}
+
+.close-form {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	font-size: 42px;
+	color: #333;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+
+.close-form:hover {
+    color: #666;
+}
+
+#update-name-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#update-name-form input {
+    text-align: center;
+    height: 30px;
+    width: 50%;
+    border-radius: 7px;
+    color: black;
+    outline: none;
+    border: 1px solid black;
+}
+
+#submit-form{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border: 2px solid #BABABA;
+    transition: all 0.3s ease-in;
+}
+
+#submit-form:hover {
+    background-color: #040E37;
+    color: #BABABA;
+}
+
+#update-username {
+    background-color: #040E37;
+    color: #BABABA;
+    height: 30px;
+    border-radius: 7px;
+    transition: all 0.3s ease-in;
+}
+
+#update-username:hover {
+    background-color: #BABABA;
+    border: 2px solid #040E37;
+    color: #040E37;
 }
