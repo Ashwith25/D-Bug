@@ -14,9 +14,6 @@ document.querySelector('.close-form').addEventListener("click", function() {
 	document.querySelector('.bg-modal-form').style.display = "none";
 });
 
-
-
-
 function python_hover_in(){
 	document.getElementsByClassName('div-blocks')[0].style.color = 'red';
 	document.getElementsByClassName('python')[0].style = "transform: scale(1.1)";

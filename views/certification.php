@@ -44,7 +44,7 @@ if(isset($_SESSION['user'])!=1){
             <img src="..\\assets\\images\\php.png" alt="">
             <h2>PHP</h2>
         </div>
-        <div class="section-blocks" onclick="window.open('https://quilgo.com/form/ns4sgVs0WlKKlvNm')" onmouseover="cpp_hover_in()" onmouseout="cpp_hover_out()">
+        <div class="section-blocks" onclick="window.open('https://quilgo.com/form/iTcaZWFYXbXEaVaB')" onmouseover="cpp_hover_in()" onmouseout="cpp_hover_out()">
             <img src="..\\assets\\images\\cpp.png" alt="">
             <h2>C++</h2>
         </div>

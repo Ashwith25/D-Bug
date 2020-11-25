@@ -67,7 +67,6 @@ h1{
 }
 
 .functionalities div {
-    border: 1px solid #BABABA;
     border-radius: 8px;
     background-color: #040E37;
 }
@@ -76,6 +75,21 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.search-block {
+    border: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: none;
+    grid-row-gap: 10px;
+    /* grid-template-rows: repeat(3, 1fr); */
+    /* height: 30%; */
+}
+
+#usrEmailID {
+    grid-column: span 2;
+    justify-self: center;
 }
 
 #table-result {
@@ -91,6 +105,7 @@ h1{
 }
 
 #table-result div {
+    border: 1px solid #BABABA;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,6 +150,11 @@ h1{
     letter-spacing: 0.5px;
 }
 
+.searchs {
+    margin: 0 10px;
+    width: 90%;
+}
+
 .submit-delete:hover {
     color: #BABABA;
     background-color: #040E37;
@@ -148,6 +168,7 @@ h1{
     outline: none;
     border: none;
     text-align: center;
+    width: 100%;
 }
 
 /* Questions Card */

@@ -5,7 +5,17 @@ if(isset($_SESSION['user'])!=1){
     header('refresh:2, url=..\index.php');
     exit();
 }
+?>
+<?php
+$conn = new mysqli('localhost', 'root', '');
+mysqli_select_db($conn, 'dbug');
 
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "select userid, name, email from register";
+$result = mysqli_query($conn, $sql);
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +31,17 @@ if(isset($_SESSION['user'])!=1){
     
     <link rel="stylesheet" href="..\assets\adminHome.css">
     <script>
-            function getUser() {
+        window.onload=function(){
+            document.getElementById('user-profile').addEventListener("click", function() {
+                document.querySelector('.bg-modal').style.display = "flex";
+            });
+
+            document.querySelector('.close').addEventListener("click", function() {
+                document.querySelector('.bg-modal').style.display = "none";
+            });
+        }
+        
+        function getUser() {
             usrEmailID = document.getElementById("usrEmailID").value;
             if (usrEmailID == ""){
                 return
@@ -36,15 +56,15 @@ if(isset($_SESSION['user'])!=1){
                 if (this.readyState==4 && this.status==200) {
                     myObj = JSON.parse(this.responseText); 
                     console.log(myObj);
-                    if (myObj.length === 0) { 
-                        txt = "No details found"
+                    if (myObj.length === 0) {
+                        alert('User not found !');
                     }
                     else{
-                    for (x in myObj) { 
-                        document.getElementById('username').innerHTML = myObj[x].name;
-                        document.getElementById('mail').innerHTML = myObj[x].email;
-                        document.getElementById('userId').innerHTML = myObj[x].userid;
-                    } 
+                        for (x in myObj) { 
+                            document.getElementById('username').innerHTML = myObj[x].name;
+                            document.getElementById('mail').innerHTML = myObj[x].email;
+                            document.getElementById('userId').innerHTML = myObj[x].userid;
+                        } 
                     }
                 }
             }
@@ -52,12 +72,104 @@ if(isset($_SESSION['user'])!=1){
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); 
             console.log(userJSON);
             xmlhttp.send("user=" + userJSON ); 
-            }
-
-            </script>
+        }
+    </script>
 </head>
+<style>
+.bg-modal {
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-contents {
+	height: 300px;
+	width: 500px;
+	background-color: #BABABA;
+	padding: 20px;
+	position: relative;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+    overflow-x: hidden;
+}
+
+.close {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	font-size: 42px;
+	color: #333;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+
+.close:hover {
+    color: #666;
+}
+
+#fetch-users{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+    color: black;
+    overflow: hidden;
+}
+
+.fetch-th{
+    border: 1px solid black;
+    /* border-collapse: collapse; */
+    padding: 5px;
+    text-align: center;
+    color: black;
+}
+
+.fetch-td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+    color: black;
+}
+
+</style>
 <body>
     <button class="logout" onclick="window.location.href='..\\includes\\logout.php'">logout</button>
+    <div class="bg-modal">
+        <div class="modal-contents">
+            <div class="close">+</div>
+            <h2 style="color: black; text-align: center;">Users List</h2>
+            <table id="fetch-users">
+            <tr>
+                <th class="fetch-th">User ID</th>
+                <th class="fetch-th">Name</th>
+                <th class="fetch-th">E-mail</th>
+            </tr>
+                <?php
+                    if (mysqli_num_rows($result) > 0) {
+                        while($row = mysqli_fetch_assoc($result)) {
+                        echo '<tr>';
+                        echo '<td class="fetch-td">'.$row["userid"].'</td>';
+                        echo '<td class="fetch-td">'.$row["name"].'</td>';
+                        echo '<td class="fetch-td">'.$row["email"].'</td>';
+                        echo '</tr>';
+                        }
+                    } else {
+                        echo "No users found";
+                    }
+                ?>
+                </table>
+	    </div>
+    </div>
+
     <div class="maincontainer">
         <h1 style="text-align: center; color: black; font-family: 'Audiowide', cursive; letter-spacing: 0.5px;">Welcome admin</h1>
         <div class="functionalities">
@@ -65,10 +177,11 @@ if(isset($_SESSION['user'])!=1){
             <p class="table-headers">Delete Users</p>
             <p class="table-headers">Add Questions</p>
             <div class="search-users">
-                <div style="border: none; display: flex; flex-direction: column; justify-content: space-around; align-items: center; height: 30%;">
-                    <p>Enter user email id </p>
-                    <input type="text" name="usrEmailID" id ="usrEmailID" style="outline: none; height: 25px; width: 80%; border-radius: 4px; border: 1px solid black; text-align: center; background-color: #BABABA;">
-                    <input type="button" style="width: 30%;" class="submit-delete" onclick="getUser()" value="Search"/>
+                <div class="search-block">
+                    <p style="grid-column: span 2;">Enter user email id </p>
+                    <input type="text" name="usrEmailID" id ="usrEmailID" style="outline: none; height: 25px; width: 80%; border-radius: 4px; border: 1px solid black; text-align: center; background-color: #BABABA; font-family: 'Montserrat', sans-serif;" required>
+                    <input type="button" class="submit-delete searchs" onclick="getUser()" value="Search"/>
+                    <input class="submit-delete searchs" id="user-profile" type="submit" value="Search all users">
                 </div>
                 <div id="table-result">
                     <div class="header">Name</div>
@@ -84,12 +197,12 @@ if(isset($_SESSION['user'])!=1){
                 <form name="form2" id="delete-user" method="POST" action="..\includes\authentication.php">
                     <table>
                         <tr>
-                            <td><label for="mail-delete">Enter User's email id</label></td>
-                            <td><input class="form-inputs" type="text" name="mail-delete" id="mail-delete" required><br></td>
+                            <td><label style="font-size: medium;" for="mail-delete">Enter User's email id</label></td>
+                            <td><input style="font-family: 'Montserrat', sans-serif; width: 100%;" class="form-inputs" type="text" name="mail-delete" id="mail-delete" required><br></td>
                         </tr>
                         <tr>
-                            <td><label for="admin-password">Enter Admin password</label></td>
-                            <td><input class="form-inputs" type="password" name="admin-password" id="admin-password" required></td>
+                            <td><label style="font-size: 15px;" for="admin-password">Enter Admin password</label></td>
+                            <td><input style="width: 100%" class="form-inputs" type="password" name="admin-password" id="admin-password" required></td>
                         </tr>
                         <tr>
                             <td colspan=2><input class="submit-delete" type="submit" value="Authenticate and delete"></td>
