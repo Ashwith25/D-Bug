@@ -29,7 +29,7 @@ if(isset($_SESSION['user'])!=1){
                 <li><a href="#"><img src="..\\assets\\images\logo-without-tagline.png" alt=""></a></li>
             </ul>
             <ul>
-                <li><a href="#">Practice</a></li>
+                <li><a href="..\views\home.php">Practice</a></li>
                 <li><a href="#">Challenges</a></li>
                 <li><a href="..\views\certification.php">Certification</a></li>
                 <li><a href="#">Forum</a></li>
@@ -37,7 +37,7 @@ if(isset($_SESSION['user'])!=1){
             </ul>
             <div class="user">
                 <p>Welcome,</p>
-                <div id="user-profile" style="display:inline-block ;font-weight:bold; color:red; cursor: pointer;">
+                <div id="user-profile" style="display:inline-block ;font-weight:bold; color:red; cursor: pointer; font-family: Audiowide, cursive;">
                     <?php echo $_SESSION["name"]; ?>
                 </div>
             </div>
@@ -77,23 +77,23 @@ if(isset($_SESSION['user'])!=1){
                 <img class="python" src="..\\assets\\images\\python.png" alt="">
                 <h2 class="python">Python</h2>
             </div>
-            <div class="div-blocks" onclick="window.open('https://quilgo.com/form/vMgxOpGeqIXPjEic')" onmouseover="java_hover_in()" onmouseout="java_hover_out()">
+            <div class="div-blocks" onclick="window.open('..\\views\\practice.php')" onmouseover="java_hover_in()" onmouseout="java_hover_out()">
                 <img class="java" src="..\\assets\\images\\java.png" alt="">
                 <h2 class="java">Java</h2>
             </div>
-            <div class="div-blocks" onclick="window.open('https://quilgo.com/form/ns4sgVs0WlKKlvNm')" onmouseover="cpp_hover_in()" onmouseout="cpp_hover_out()">
+            <div class="div-blocks" onclick="window.open('..\\views\\practice.php')" onmouseover="cpp_hover_in()" onmouseout="cpp_hover_out()">
                 <img class="cpp" src="..\\assets\\images\\cpp.png" alt="">
                 <h2 class="cpp">C++</h2>
             </div>
-            <div class="div-blocks" onclick="window.open('https://quilgo.com/form/uNBNpqJX3QeBHoyx')" onmouseover="csharp_hover_in()" onmouseout="csharp_hover_out()">
+            <div class="div-blocks" onclick="window.open('..\\views\\practice.php')" onmouseover="csharp_hover_in()" onmouseout="csharp_hover_out()">
                 <img class="csharp" src="..\\assets\\images\\c-sharp.png" alt="">
                 <h2 class="csharp">C#</h2>
             </div>
-            <div class="div-blocks" onclick="window.open('https://quilgo.com/form/4h2Cn04c3Hg2jYKi')" onmouseover="js_hover_in()" onmouseout="js_hover_out()">
+            <div class="div-blocks" onclick="window.open('..\\views\\practice.php')" onmouseover="js_hover_in()" onmouseout="js_hover_out()">
                 <img class="js" src="..\\assets\\images\\javascript.png" alt="">
                 <h2 class="js">JavaScript</h2>
             </div>
-            <div class="div-blocks" onclick="window.open('https://quilgo.com/form/M7MjtCapfDM26bCy')" onmouseover="php_hover_in()" onmouseout="php_hover_out()">
+            <div class="div-blocks" onclick="window.open('..\\views\\practice.php')" onmouseover="php_hover_in()" onmouseout="php_hover_out()">
                 <img class="php" src="..\\assets\\images\\php.png" alt="">
                 <h2 class="php">PHP</h2>
             </div>

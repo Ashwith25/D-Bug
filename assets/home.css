@@ -79,7 +79,8 @@ ul li {
 .section1 {
     height: 90%;
     width: 100%;
-    padding: 30px 10px;
+    margin: 30px 0;
+    padding: 0 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -268,7 +269,8 @@ ul li {
 	top: 0;
 	display: none;
 	justify-content: center;
-	align-items: center;
+    align-items: center;
+    z-index: 1;
 }
 
 .modal-contents {
@@ -282,6 +284,7 @@ ul li {
     flex-direction: column;
     justify-content: space-around;
     align-self: center;
+    z-index: 2;
 }
 
 .close {
@@ -327,6 +330,7 @@ ul li {
 	justify-content: center;
     align-items: center;
     flex-direction: column;
+    z-index: 1;
 }
 
 .modal-contents-form {
@@ -339,6 +343,7 @@ ul li {
     display: flex;
     justify-content: space-around;
     align-self: center;
+    z-index: 2;
 }
 
 .close-form {

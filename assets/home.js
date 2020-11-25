@@ -22,8 +22,8 @@ function python_hover_in(){
 
 function python_hover_out(){
 	document.getElementsByClassName('div-blocks')[0].style.color = '#BABABA';
-	document.getElementsByClassName('python')[0].style = "transform: scale(1)";
-	document.getElementsByClassName('python')[1].style = "transform: scale(1)";
+	document.getElementsByClassName('python')[0].style = "transform: scale(1); z-index: 0";
+	document.getElementsByClassName('python')[1].style = "transform: scale(1); z-index: 0";
 }
 
 function java_hover_in(){
@@ -34,8 +34,8 @@ function java_hover_in(){
 
 function java_hover_out(){
 	document.getElementsByClassName('div-blocks')[1].style.color = '#BABABA';
-	document.getElementsByClassName('java')[0].style = "transform: scale(1)";
-	document.getElementsByClassName('java')[1].style = "transform: scale(1)";
+	document.getElementsByClassName('java')[0].style = "transform: scale(1); z-index: 0";
+	document.getElementsByClassName('java')[1].style = "transform: scale(1); z-index: 0";
 }
 
 function js_hover_in(){
@@ -46,8 +46,8 @@ function js_hover_in(){
 
 function js_hover_out(){
 	document.getElementsByClassName('div-blocks')[4].style.color = '#BABABA';
-	document.getElementsByClassName('js')[0].style = "transform: scale(1)";
-	document.getElementsByClassName('js')[1].style = "transform: scale(1)";
+	document.getElementsByClassName('js')[0].style = "transform: scale(1); z-index: 0";
+	document.getElementsByClassName('js')[1].style = "transform: scale(1); z-index: 0";
 }
 
 function php_hover_in(){
@@ -58,8 +58,8 @@ function php_hover_in(){
 
 function php_hover_out(){
 	document.getElementsByClassName('div-blocks')[5].style.color = '#BABABA';
-	document.getElementsByClassName('php')[0].style = "transform: scale(1)";
-	document.getElementsByClassName('php')[1].style = "transform: scale(1)";
+	document.getElementsByClassName('php')[0].style = "transform: scale(1); z-index: 0";
+	document.getElementsByClassName('php')[1].style = "transform: scale(1); z-index: 0";
 }
 
 function cpp_hover_in(){
@@ -70,8 +70,8 @@ function cpp_hover_in(){
 
 function cpp_hover_out(){
 	document.getElementsByClassName('div-blocks')[2].style.color = '#BABABA';
-	document.getElementsByClassName('cpp')[0].style = "transform: scale(1)";
-	document.getElementsByClassName('cpp')[1].style = "transform: scale(1)";
+	document.getElementsByClassName('cpp')[0].style = "transform: scale(1); z-index: 0";
+	document.getElementsByClassName('cpp')[1].style = "transform: scale(1); z-index: 0";
 }
 
 function csharp_hover_in(){
@@ -82,6 +82,6 @@ function csharp_hover_in(){
 
 function csharp_hover_out(){
 	document.getElementsByClassName('div-blocks')[3].style.color = '#BABABA';
-	document.getElementsByClassName('csharp')[0].style = "transform: scale(1)";
-	document.getElementsByClassName('csharp')[1].style = "transform: scale(1)";
+	document.getElementsByClassName('csharp')[0].style = "transform: scale(1); z-index: 0";
+	document.getElementsByClassName('csharp')[1].style = "transform: scale(1); z-index: 0";
 }

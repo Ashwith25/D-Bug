@@ -156,13 +156,14 @@ $result = mysqli_query($conn, $sql);
                 <?php
                     if (mysqli_num_rows($result) > 0) {
                         while($row = mysqli_fetch_assoc($result)) {
-                        echo '<tr>';
-                        echo '<td class="fetch-td">'.$row["userid"].'</td>';
-                        echo '<td class="fetch-td">'.$row["name"].'</td>';
-                        echo '<td class="fetch-td">'.$row["email"].'</td>';
-                        echo '</tr>';
+                            echo '<tr>';
+                            echo '<td class="fetch-td">'.$row["userid"].'</td>';
+                            echo '<td class="fetch-td">'.$row["name"].'</td>';
+                            echo '<td class="fetch-td">'.$row["email"].'</td>';
+                            echo '</tr>';
                         }
-                    } else {
+                    } 
+                    else {
                         echo "No users found";
                     }
                 ?>
@@ -171,7 +172,7 @@ $result = mysqli_query($conn, $sql);
     </div>
 
     <div class="maincontainer">
-        <h1 style="text-align: center; color: black; font-family: 'Audiowide', cursive; letter-spacing: 0.5px;">Welcome admin</h1>
+        <h1 style="text-align: center; color: black; font-family: 'Audiowide', cursive; letter-spacing: 0.5px; font-weight: lighter;">Welcome admin</h1>
         <div class="functionalities">
             <p class="table-headers">Search Users</p>
             <p class="table-headers">Delete Users</p>
