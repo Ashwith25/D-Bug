@@ -47,15 +47,21 @@ if(isset($_SESSION['user'])!=1){
 	        <div class="modal-contents">
 		        <div class="close">+</div>
                 <?php
+                    $userid = $_SESSION['userid'];
                     $emails = $_SESSION["user"];
                     $query1 = "select name from register where email = '$emails' ";
+                    $query2 = "select * from progress where userid='$userid'";
                     $result_name = mysqli_query($conn, $query1);
+                    $result_id = mysqli_query($conn, $query2);
+                    $rows = mysqli_num_rows($result_id);
                     $fetch_name = mysqli_fetch_row($result_name);
                     echo '<div id="user-details">';
                     echo '<p>Username: </p>';
                     echo '<p>'.$fetch_name[0].'</p>';
                     echo '<p>Registerd E-mail: </p>';
                     echo '<p>'.$emails.'</p>';
+                    echo '<p>Questions solved</p>';
+                    echo '<p>'.$rows.'</p>';
                     echo '</div>';
                 ?>
                 <button id="update-username">Update Username</button>

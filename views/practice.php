@@ -15,7 +15,9 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "select quesid, question, answer from questions";
+$userid = $_SESSION["userid"];
+
+$sql = "select * from questions where quesid NOT IN ( SELECT quesid from progress where userid='$userid')";
 $result = mysqli_query($conn, $sql);
 ?>
 
@@ -54,10 +56,9 @@ $result = mysqli_query($conn, $sql);
                     // </div>
                 ?>
             </div>
-            <!-- <div class="compiler">
-                <iframe height="400px" width="100%" src="https://repl.it/@AshwithPoojary/WiseGreenProgram?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-            </div> -->
-        </div>
+            <div class="compiler">
+                <iframe height="400px" width="100%" src="https://repl.it/@AshwithPoojary/WiseGreenProgram?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>            </div>
+            </div>
     </div>
 <script src="..\assets\practice.js"></script>
 </body>

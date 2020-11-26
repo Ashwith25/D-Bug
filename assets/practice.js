@@ -12,6 +12,14 @@ document.querySelector('.question-block').addEventListener("click", function(e){
             question.style = "color:green";
             e.target.parentElement.childNodes[3].style = "border: 3px solid green";
             e.target.parentElement.childNodes[4].disabled = true;
+            
+            var obj = {quesid: quesid};
+            var quesJSON = JSON.stringify(obj);
+            
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("POST","..\\includes\\solved.php",true);
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlhttp.send("question=" + quesJSON);
         }
         else {
             question.style = "color: red";
@@ -20,4 +28,11 @@ document.querySelector('.question-block').addEventListener("click", function(e){
     }
 });
 
-// var question = document.getElementsByClassName("question");
+// var xmlhttp = new XMLHttpRequest();
+//     xmlhttp.onreadystatechange = function() {
+//       if (this.readyState == 4 && this.status == 200) {
+//         document.getElementById("txtHint").innerHTML = this.responseText;
+//       }
+//     };
+//     xmlhttp.open("POST","..\\includes\\getuser.php",true);
+//     xmlhttp.send();

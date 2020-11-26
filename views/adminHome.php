@@ -47,15 +47,12 @@ $result = mysqli_query($conn, $sql);
                 return
             }
             var obj = {usrEmail: usrEmailID};
-            console.log(usrEmailID);
             var userJSON = JSON.stringify(obj);
 
-            var txt ="";
             var xmlhttp=new XMLHttpRequest();
             xmlhttp.onreadystatechange=function() {
                 if (this.readyState==4 && this.status==200) {
                     myObj = JSON.parse(this.responseText); 
-                    console.log(myObj);
                     if (myObj.length === 0) {
                         alert('User not found !');
                     }
