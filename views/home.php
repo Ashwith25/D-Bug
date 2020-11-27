@@ -32,7 +32,7 @@ if(isset($_SESSION['user'])!=1){
                 <li><a href="..\views\home.php">Practice</a></li>
                 <li><a href="..\views\challenges.php">Challenges</a></li>
                 <li><a href="..\views\certification.php">Certification</a></li>
-                <li><a href="#">Forum</a></li>
+                <li><a href="..\views\forum.php">Forum</a></li>
                 <li><a href="..\includes\logout.php">Logout</a></li>
             </ul>
             <div class="user">

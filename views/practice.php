@@ -41,24 +41,18 @@ $result = mysqli_query($conn, $sql);
                             echo '<div class="question">';
                             echo '<div class="hidden-id">'.$row["quesid"].'</div>';
                             echo '<div class="problem">'.$row["question"].'</div>';
-                            echo '<div class="answer-hidden">'.$row["answer"].'</div>';
+                            // echo '<div class="answer-hidden">'.$row["answer"].'</div>';
                             echo '<input type="text" class="answer" name="answer-text" placeholder="Enter answer">';
                             echo '<button class="submit-button">Submit</button>';
                             echo '</div>';
                             echo '<hr>';
                         }
                     }
-                    // <div class="question">
-                    //     <div class="problem"></div>
-                    //     <div classs="answer"><input type="text" name="answer-text" placeholder="Enter answer"></div>
-                    //     <div class="submit-button"></div>
-                    //     <button>Submit</button>
-                    // </div>
                 ?>
             </div>
-            <div class="compiler">
+            <!-- <div class="compiler">
                 <iframe height="400px" width="100%" src="https://repl.it/@AshwithPoojary/WiseGreenProgram?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>            </div>
-            </div>
+            </div> -->
     </div>
 <script src="..\assets\practice.js"></script>
 </body>

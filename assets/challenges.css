@@ -9,7 +9,7 @@
     flex-direction: column;
     height: 100vh;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     background-color: #040e37;
 }
@@ -18,24 +18,70 @@ h1 {
     color: #bababa;
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
-}
+    margin-bottom: 30px;
+    margin-top: 65px
+    ;
+} 
 
 .para1 {
     color: #bababa;
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
+    margin-bottom: 30px;
+}
 
+
+.notify {
+    height: 30%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .para2 {
     color: red;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
+    margin-bottom: 20px;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 33%;
+    width: 50%;
+
 }
 
 .email {
+    text-align: center;
     background-color: #bababa;
     height: 30px;
     width: 100%;
     border-radius: 7px;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.submit {
+    background-color: #bababa;
+    text-align: center;
+    height: 30px;
+    width: 30%;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease-in;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.submit:hover {
+    background-color: #040e37;
+    border: 1px solid #bababa;
+    color: #bababa;
 }

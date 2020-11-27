@@ -17,15 +17,26 @@ if(isset($_SESSION['user'])!=1){
         <link rel="stylesheet" href="..\assets\challenges.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
     </head>
+    <script>
+        quesid = document.getElementsByClassName("email")[0].value;
+        var obj = {quesid: quesid};
+        var quesJSON = JSON.stringify(obj);
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("POST","..\\includes\\solved.php",true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send("question=" + quesJSON);
+    </script>
     <body>
         <div class="main-container">
             <h1>Thankyou for showing your interest!</h1>
             <p class="para1">There are currently no challenges going on</p>
-            <p class="para2">To get notified provide your Email Address below!</p>
-            <form action="..\includes\notified.php" method="POST">
-                <input type="email" class="email" placeholder="E-mail">
-                <input type="submit" class="submit" value="Submit">
+            <div class="notify">
+                <p class="para2">To get notified provide your Email Address below!</p>
+                <form action="..\includes\notified.php" method="POST">
+                    <input type="email" class="email" placeholder="E-mail">
+                    <input type="submit" class="submit" value="Submit">
             </form>
+            </div>
         </div>
     </body>
 </html>

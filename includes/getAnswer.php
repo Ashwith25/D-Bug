@@ -11,9 +11,14 @@ if (!$conn) {
 }
 
 $quesid=$obj->quesid;
+$output = array();
 
-$sql = "insert into subscribe(email) values ('$quesid')";
-mysqli_query($conn, $sql);
-
+$sql = "SELECT * from questions where quesid ='$quesid'";
+$result = mysqli_query($conn, $sql);
+ while($row = mysqli_fetch_assoc($result)) {
+	$output[]=$row;
+  }
+$sresult = json_encode($output);
+echo $sresult;
 mysqli_close($conn);
 ?>
