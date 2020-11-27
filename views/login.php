@@ -78,74 +78,74 @@ if (isset($_SESSION["user"]))
 	</style>
 </head>
 <body>
-<div class="container" id="container">
-	<div class="form-container sign-up-container">
-		<form name="signup_form" method="POST" action="..\includes\register.php">
-			<h1>Create Account</h1>
-			<div class="social-container">
-				<a href="#" class="social1"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social2"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social3"><i class="fab fa-linkedin-in"></i></a>
-			</div>
+	<div class="container" id="container">
+		<div class="form-container sign-up-container">
+			<form name="signup_form" method="POST" action="..\includes\register.php">
+				<h1>Create Account</h1>
+				<div class="social-container">
+					<a href="#" class="social1"><i class="fab fa-facebook-f"></i></a>
+					<a href="#" class="social2"><i class="fab fa-google-plus-g"></i></a>
+					<a href="#" class="social3"><i class="fab fa-linkedin-in"></i></a>
+				</div>
 
-			<span>or use your email for registration</span>
+				<span>or use your email for registration</span>
 
-			<div class="input-icons">
-				<i class="fa fa-user icon"></i>
-				<input type="text" class = "input_name" name="name" placeholder="Name" pattern="[(A-Z)* (a-z)*]+" 
-				title="Should only contain letters" required/>
-				<i class="fa fa-envelope icon"></i>
-				<input type="email" name="email" placeholder="Email" required/>
-				<i class="fa fa-lock icon"></i>
-				<input type="password" name="password" class="input_password" placeholder="Password" pattern="^(?=.*[a-z])(?=.+[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" 
-				title="Password must contain:
-				• At least 1 Uppercase
-				• At least 1 Lowercase
-				• At least 1 Number
-				• At least 1 Symbol, symbol allowed --> !@#$%^&*_=+-
-				• Minimum 5 charachters" required/>
-				<i class="fa fa-lock icon"></i>
-				<input type="password" name="confirm_password" placeholder="Confirm password" required>
-			</div>
-			<div class="error"></div>
-			<button type="submit" onclick="form_submit()">sign up</button>
-		</form>
-	</div>
-	<div class="form-container sign-in-container">
-		<form name="signin_form" method="POST" action="..\includes\signin.php">
-			<img src="..\\assets\\images\logo2.png" alt="logo" style="height: 150px; width: 200px;">
-			<h1>Sign in</h1>
-			<div class="social-container">
-				<a href="#" class="social1"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social2"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social3"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-			<span>or use your account</span>
-			<div class="input-icons"> 
-				<i class="fa fa-envelope icon"></i>
-				<input type="email" name="signin_email" placeholder="Email" required/>
-				<i class="fa fa-lock icon"></i>
-				<input type="password" name="signin_password" placeholder="Password" required/>
-			</div>  
-			<button type="submit" onclick="form_submit_signin()">login</button>
-			<a id='forgot-pass' href="#">Forgot your password?</a>
-		</form>
-	</div>
-	<div class="overlay-container">
-		<div class="overlay">
-			<div class="overlay-panel overlay-left">
-				<h1 style="color: black;">Welcome Back!</h1>
-				<p>To keep connected with us please login with your personal info</p>
-				<button class="ghost" id="signIn" style="color: #040E37;">sign in</button>
-			</div>
-			<div class="overlay-panel overlay-right">
-				<h1 style="color: black;">Hello, Friend!</h1>
-				<p>Enter your personal details and start journey with us</p>
-				<button class="ghost" id="signUp" style="color: #040E37;">sign up</button>
+				<div class="input-icons">
+					<i class="fa fa-user icon"></i>
+					<input type="text" class = "input_name" name="name" placeholder="Name" pattern="[(A-Z)* (a-z)*]+" 
+					title="Should only contain letters" required/>
+					<i class="fa fa-envelope icon"></i>
+					<input type="email" name="email" placeholder="Email" required/>
+					<i class="fa fa-lock icon"></i>
+					<input type="password" name="password" class="input_password" placeholder="Password" pattern="^(?=.*[a-z])(?=.+[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" 
+					title="Password must contain:
+					• At least 1 Uppercase
+					• At least 1 Lowercase
+					• At least 1 Number
+					• At least 1 Symbol, symbol allowed --> !@#$%^&*_=+-
+					• Minimum 5 charachters" required/>
+					<i class="fa fa-lock icon"></i>
+					<input type="password" name="confirm_password" placeholder="Confirm password" required>
+				</div>
+				<div class="error"></div>
+				<button type="submit" onclick="form_submit()">sign up</button>
+			</form>
+		</div>
+		<div class="form-container sign-in-container">
+			<form name="signin_form" method="POST" action="..\includes\signin.php">
+				<img src="..\\assets\\images\logo2.png" alt="logo" style="height: 150px; width: 200px;">
+				<h1>Sign in</h1>
+				<div class="social-container">
+					<a href="#" class="social1"><i class="fab fa-facebook-f"></i></a>
+					<a href="#" class="social2"><i class="fab fa-google-plus-g"></i></a>
+					<a href="#" class="social3"><i class="fab fa-linkedin-in"></i></a>
+				</div>
+				<span>or use your account</span>
+				<div class="input-icons"> 
+					<i class="fa fa-envelope icon"></i>
+					<input type="email" name="signin_email" placeholder="Email" required/>
+					<i class="fa fa-lock icon"></i>
+					<input type="password" name="signin_password" placeholder="Password" required/>
+				</div>  
+				<button type="submit" onclick="form_submit_signin()">login</button>
+				<a id='forgot-pass' href="#">Forgot your password?</a>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-left">
+					<h1 style="color: black;">Welcome Back!</h1>
+					<p>To keep connected with us please login with your personal info</p>
+					<button class="ghost" id="signIn" style="color: #040E37;">sign in</button>
+				</div>
+				<div class="overlay-panel overlay-right">
+					<h1 style="color: black;">Hello, Friend!</h1>
+					<p>Enter your personal details and start journey with us</p>
+					<button class="ghost" id="signUp" style="color: #040E37;">sign up</button>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<script src="..\assets\login.js"></script>
+	<script src="..\assets\login.js"></script>
 </body>
 </html>

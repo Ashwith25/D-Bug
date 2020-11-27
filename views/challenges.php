@@ -18,13 +18,24 @@ if(isset($_SESSION['user'])!=1){
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
     </head>
     <script>
-        quesid = document.getElementsByClassName("email")[0].value;
-        var obj = {quesid: quesid};
-        var quesJSON = JSON.stringify(obj);
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("POST","..\\includes\\solved.php",true);
-        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xmlhttp.send("question=" + quesJSON);
+        function notify(){
+            quesid = document.getElementsByClassName("email")[0].value;
+            if (quesid.length == 0){
+                alert("Please enter your Email-Id");
+            }
+            else if(!quesid.match('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z].{2,3}$')){
+                alert ("Invalid Email-Id");
+	        }
+            else{
+                var obj = {quesid: quesid};
+                var quesJSON = JSON.stringify(obj);
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("POST","..\\includes\\notified.php",true);
+                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xmlhttp.send("question=" + quesJSON);
+                alert ("You'll be notified soon!");
+            }
+        }
     </script>
     <body>
         <div class="main-container">
@@ -32,10 +43,8 @@ if(isset($_SESSION['user'])!=1){
             <p class="para1">There are currently no challenges going on</p>
             <div class="notify">
                 <p class="para2">To get notified provide your Email Address below!</p>
-                <form action="..\includes\notified.php" method="POST">
-                    <input type="email" class="email" placeholder="E-mail">
-                    <input type="submit" class="submit" value="Submit">
-            </form>
+                <input type="email" class="email" placeholder="E-mail" required>
+                <input type="submit" onclick="notify()" class="submit" value="Submit">
             </div>
         </div>
     </body>

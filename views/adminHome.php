@@ -52,22 +52,21 @@ $result = mysqli_query($conn, $sql);
             var xmlhttp=new XMLHttpRequest();
             xmlhttp.onreadystatechange=function() {
                 if (this.readyState==4 && this.status==200) {
-                    myObj = JSON.parse(this.responseText); 
+                    myObj = JSON.parse(this.responseText);
                     if (myObj.length === 0) {
                         alert('User not found !');
                     }
                     else{
-                        for (x in myObj) { 
+                        for (x in myObj) {
                             document.getElementById('username').innerHTML = myObj[x].name;
                             document.getElementById('mail').innerHTML = myObj[x].email;
                             document.getElementById('userId').innerHTML = myObj[x].userid;
-                        } 
+                        }
                     }
                 }
             }
             xmlhttp.open("POST","../includes/indexphpajaxgetuserdetails.php",true);
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); 
-            console.log(userJSON);
             xmlhttp.send("user=" + userJSON ); 
         }
     </script>
@@ -145,11 +144,11 @@ $result = mysqli_query($conn, $sql);
             <div class="close">+</div>
             <h2 style="color: black; text-align: center;">Users List</h2>
             <table id="fetch-users">
-            <tr>
-                <th class="fetch-th">User ID</th>
-                <th class="fetch-th">Name</th>
-                <th class="fetch-th">E-mail</th>
-            </tr>
+                <tr>
+                    <th class="fetch-th">User ID</th>
+                    <th class="fetch-th">Name</th>
+                    <th class="fetch-th">E-mail</th>
+                </tr>
                 <?php
                     if (mysqli_num_rows($result) > 0) {
                         while($row = mysqli_fetch_assoc($result)) {
@@ -160,14 +159,14 @@ $result = mysqli_query($conn, $sql);
                             echo '</tr>';
                         }
                     } 
-                    else {
+                    else 
+                    {
                         echo "No users found";
                     }
                 ?>
-                </table>
+            </table>
 	    </div>
     </div>
-
     <div class="maincontainer">
         <h1 style="text-align: center; color: black; font-family: 'Audiowide', cursive; letter-spacing: 0.5px; font-weight: lighter;">Welcome admin</h1>
         <div class="functionalities">
@@ -190,7 +189,6 @@ $result = mysqli_query($conn, $sql);
                     <div id="userId"></div>
                 </div>
             </div>
-
             <div class="delete-users">
                 <form name="form2" id="delete-user" method="POST" action="..\includes\authentication.php">
                     <table>

@@ -43,9 +43,6 @@
                 <div class="img">
                 </div>
                 <div class="video">
-                    <!-- <video autoplay muted no-loop playsinline id="myVideo">
-                        <source src="video\Comp 1.mov" type="video/quicktime">
-                    </video> -->
                     <img id="myVideo" src="assets\video\ezgif.com-crop.gif" alt="">
                 </div>
         </section>
@@ -140,7 +137,7 @@
                 </div>
                 <div id="map"></div>
             </div>
-            </section>
+        </section>
     </div>
 <script src = "assets\landing.js"></script>
 </body>

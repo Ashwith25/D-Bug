@@ -15,7 +15,7 @@ $output = array();
 
 $sql = "SELECT * from register where email ='$emailid'";
 $result = mysqli_query($conn, $sql);
- while($row = mysqli_fetch_assoc($result)) {
+while($row = mysqli_fetch_assoc($result)) {
 	$output[]=$row;
   }
 $sresult = json_encode($output);

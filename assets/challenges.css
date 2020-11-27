@@ -47,25 +47,16 @@ h1 {
 
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 33%;
-    width: 50%;
-
-}
-
 .email {
     text-align: center;
     background-color: #bababa;
     height: 30px;
-    width: 100%;
+    width: 50%;
     border-radius: 7px;
     border: none;
     outline: none;
     font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
 }
 
 .submit {
@@ -78,6 +69,7 @@ form {
     outline: none;
     transition: all 0.3s ease-in;
     font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
 }
 
 .submit:hover {

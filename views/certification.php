@@ -5,7 +5,6 @@ if(isset($_SESSION['user'])!=1){
     header('refresh:2, url=..\index.php');
     exit();
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -53,6 +52,6 @@ if(isset($_SESSION['user'])!=1){
             <h2>C#</h2>
         </div>
     </div>
-<script src = "..\\assets\certification.js"></script>
+    <script src = "..\\assets\certification.js"></script>
 </body>
 </html>

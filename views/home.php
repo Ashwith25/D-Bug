@@ -105,7 +105,6 @@ if(isset($_SESSION['user'])!=1){
             </div>
         </div>
     </div>
-    
     <hr>
     <div class="footer">
         <div class="map">
@@ -143,7 +142,6 @@ if(isset($_SESSION['user'])!=1){
                 <a href="#"><img src="..\\assets\\images\\png\\005-linkedin.png" alt=""></a>
             </div>
         </div>
-        
         <div class="copyright">
             <p>©2020 D-Bug, All rights reserved</p>
         </div>
