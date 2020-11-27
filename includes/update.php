@@ -18,7 +18,8 @@ if ($verify_pass) {
     if (mysqli_query($conn, $query1)) {
         echo "Record updated successfully";
       }
-    echo '<br>Please login again to see the changes';
+    echo '<br>Please login again to see the changes';   
+    
     header('refresh:2, url=..\views\home.php');
 }
 else {

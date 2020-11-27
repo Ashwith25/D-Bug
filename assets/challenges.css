@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #040e37;
+}
+
+h1 {
+    color: #bababa;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+}
+
+.para1 {
+    color: #bababa;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+
+}
+
+.para2 {
+    color: red;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.email {
+    background-color: #bababa;
+    height: 30px;
+    width: 100%;
+    border-radius: 7px;
+}
